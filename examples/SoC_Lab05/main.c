@@ -164,7 +164,7 @@ extern int main( void )
 {
 
 	/* Disable watchdog */
-WDT_Disable(WDT);
+	WDT_Disable(WDT);
 
 
 	/* Enable I and D cache */
