@@ -9,6 +9,9 @@
 
 // some globle definitions
 #define CHIPID_CIDR (*(uint32_t *)0x400E0940)
+#define TRNG_CR (*(uint32_t *)0x40070000)
+#define TRNG_STATUS (*(uint32_t *)0x4007001C)
+#define TRNG_DATA (*(uint32_t *)0x40070050)
 
 // Global Struct for CHIP_ID
 struct CHIP_ID
@@ -22,6 +25,9 @@ struct CHIP_ID
 // This function prints a menu in to the debug window every time it is called.
 extern void main_screen(void)
 {
+	//extra space
+	printf("\n\r");
+	
 	// printing the menu
 	printf("  Gabe's Title Should go here... \n\r");
 	printf(" _______________________________ \n\r");
@@ -30,7 +36,7 @@ extern void main_screen(void)
 	printf("| For Pointer Test --- press: 1 |\n\r");
 	printf("| For Array Test ----- press: 2 |\n\r");
 	printf("| For Read Chip ID --- press: 3 |\n\r");
-	printf("| For phd4 ----------- press: 4 |\n\r");
+	printf("| For Trng Test ------ press: 4 |\n\r");
 	printf("| For this Menu ------ press: * |\n\r");
 	printf("|_______________________________|\n\r");
 	printf("This menu is pretty and should impress you.\n\r");
@@ -47,9 +53,12 @@ extern void struct_test(void)
 	CHIP_ID1.CHIP_ID_REG = 744234;
 	CHIP_ID1.CHIP_ID_EXT_REG = 1337;
 	
+	//extra space
+	printf("\n\r");
+	
 	// print values
-	printf("CHIP ID Reg = %d\n\r", CHIP_ID1.CHIP_ID_REG);
-	printf("CHIP ID Ext Reg = %d\n\r", CHIP_ID1.CHIP_ID_EXT_REG);
+	printf(" CHIP ID Reg = %d\n\r", CHIP_ID1.CHIP_ID_REG);
+	printf(" CHIP ID Ext Reg = %d\n\r", CHIP_ID1.CHIP_ID_EXT_REG);
 	
 	//extra space
 	printf("\n\r");
@@ -64,18 +73,24 @@ extern void pointer_test(void)
 	// store memory location of dog in cat
 	cat = &dog;
 	
+	//extra space
+	printf("\n\r");
+	
 	// print crap
-	printf("Dog's address: %d\n\r", (int)&dog); // should work... hopefully ---- and it did Hurrah!
-	printf("The value cat is holding: %d\n\r", (int)cat);
-	printf("The value cat is pointing to: %d\n\r", (int)(*cat));
+	printf(" Dog's address: %d\n\r", (int)&dog); 
+	printf(" The value cat is holding: %d\n\r", (int)cat);
+	printf(" The value cat is pointing to: %d\n\r", (int)(*cat));
 	
 	//extra space
 	printf("\n\r");
 }
 extern void array_test(void)
 {
+	//extra space
+	printf("\n\r");
+	
 	// heres the text
-	char text[] = "Hello!";
+	char text[] = " Hello!";
 	
 	// printing it out the hard way...
 	for (int i = 0; i < sizeof(text); i++)
@@ -93,25 +108,72 @@ extern void array_test(void)
 	text[5] = 'y';
 	
 	// now to print the normal way
-	printf("%s\n\r",text);
+	printf(" %s\n\r",text);
 	
 	//extra space
 	printf("\n\r");
 }
 
-
+// this fuction reads the chips ID and prints info about it
 extern void read_chip_id(void)
 {
+	//extra space
+	printf("\n\r");
+	
+	// create a temp variable
 	uint32_t temp;
   temp = CHIPID_CIDR;
-	printf("The Chip ID is: %#X\n\r", temp);
 	
+	// print out the id in hex
+	printf(" The Chip ID is: %#X\n\r\n\r", temp);
+	
+	// now print each value on the data sheet in decimal
+	printf(" The Version of the Device:                         %2d\n\r", (temp & 0x0000001F));
+	printf(" The Embedded Processor Value:                      %2d\n\r", ((temp & 0x000000E0) >> 5));
+	printf(" The Nonvolatile Program Memory Size Value:         %2d\n\r", ((temp & 0x00000F00) >> 8));
+	printf(" The Second Nonvolatile Program Memory Size Value:  %2d\n\r", ((temp & 0x0000F000) >> 12));
+	printf(" The Internal SRAM Size Value:                      %2d\n\r", ((temp & 0x000F0000) >> 16));
+	printf(" The Architecture Identifier Value:                 %2d\n\r", ((temp & 0x0FF00000) >> 20));
+	printf(" The Nonvolatile Program Memory Type Value:         %2d\n\r", ((temp & 0x70000000) >> 28));
+	printf(" The Extension Flag Value:                          %2d\n\r", ((temp & 0x80000000) >> 31));
+	
+	//extra space
+	printf("\n\r");
 	
 }
 
 
+// generates random numbers
+extern void trng_test(void)
+{
+	//extra space
+	printf("\n\r");
+	
+	// enables the trig clock
+	PMC_EnablePeripheral(ID_TRNG);
+	
+	// enable the random key generator
+	TRNG_CR = 0x524E4701; // lets see if it works
+	
+	// create a temp register
+	uint32_t check;
+	check = TRNG_STATUS;
+	
+	// make sure the random number is ready
+	while(!check)
+	{
+		check = TRNG_STATUS;
+	}
+	
+	// print the number in hex (so we avoid negitive)
+	printf(" Random Number: %#X\n\r", TRNG_DATA);
 
-extern void phd4(void){printf("Place holder Function 4 called! \n\r\n\r");}
+	// turn off the random number gen to save power
+	PMC_DisablePeripheral(ID_TRNG);
+	
+	//extra space
+	printf("\n\r");
+}
 
 
 // This checks to see if a character was entered
@@ -146,7 +208,7 @@ static void _DBGU_Handler(void)
 			read_chip_id();
 			break;
 		case '4':
-			phd4();
+			trng_test();
 			break;
 		case '*':
 			main_screen();
