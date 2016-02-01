@@ -1,0 +1,29 @@
+<map id="G" name="G">
+<area shape="rect" id="node4" href="dir_90ced7d80b8c0790ec183d29e97f15eb.html" title="audio&#45;speaker" alt="" coords="1445,68,1571,116"/>
+<area shape="rect" id="node16" href="dir_2b8e5cd630bbda9c0cd4fa94d0e3f08d.html" title="include" alt="" coords="764,164,839,212"/>
+<area shape="rect" id="edge26" href="dir_000158_000177.html" title="8" alt="" coords="853,185,862,205"/>
+<area shape="rect" id="node5" href="dir_29d56db5a9398d0075b10c60dba578c7.html" title="audio&#45;speakerphone" alt="" coords="1251,68,1421,116"/>
+<area shape="rect" id="edge14" href="dir_000159_000177.html" title="11" alt="" coords="848,182,867,202"/>
+<area shape="rect" id="node6" href="dir_f169ed1ec845f1f5bb78b9242c15ffd3.html" title="ccid" alt="" coords="1155,68,1227,116"/>
+<area shape="rect" id="edge18" href="dir_000160_000177.html" title="5" alt="" coords="853,182,862,202"/>
+<area shape="rect" id="node7" href="dir_3994c28f5174ea8cbf68d909814d364a.html" title="cdc&#45;eem" alt="" coords="1045,68,1131,116"/>
+<area shape="rect" id="edge24" href="dir_000161_000177.html" title="11" alt="" coords="848,182,867,202"/>
+<area shape="rect" id="node8" href="dir_81236c6893eb27f05cf304a532c20784.html" title="cdc&#45;serial" alt="" coords="928,68,1021,116"/>
+<area shape="rect" id="edge22" href="dir_000162_000177.html" title="13" alt="" coords="850,165,868,185"/>
+<area shape="rect" id="node9" href="dir_76e00c3643840c362792f41dfcba5c42.html" title="composite" alt="" coords="808,68,904,116"/>
+<area shape="rect" id="edge12" href="dir_000164_000177.html" title="32" alt="" coords="822,142,841,162"/>
+<area shape="rect" id="node10" href="dir_1c1ef3e3bab376d59e9f0b2449cfe16b.html" title="core" alt="" coords="712,68,784,116"/>
+<area shape="rect" id="edge16" href="dir_000155_000177.html" title="14" alt="" coords="777,133,796,153"/>
+<area shape="rect" id="node11" href="dir_e39193bed6b1b2d679821156ac499236.html" title="hal_examples" alt="" coords="571,68,688,116"/>
+<area shape="rect" id="edge10" href="dir_000166_000177.html" title="2" alt="" coords="747,145,756,165"/>
+<area shape="rect" id="node12" href="dir_bfb55a1a43e7958c1d4e8cc55314ea45.html" title="hid&#45;keyboard" alt="" coords="429,68,547,116"/>
+<area shape="rect" id="edge6" href="dir_000167_000177.html" title="27" alt="" coords="738,164,756,184"/>
+<area shape="rect" id="node13" href="dir_660849b38fb593117d0706d7cf92f873.html" title="hid&#45;mouse" alt="" coords="307,68,405,116"/>
+<area shape="rect" id="edge8" href="dir_000168_000177.html" title="6" alt="" coords="742,166,751,186"/>
+<area shape="rect" id="node14" href="dir_a6d887642e907fdf696336f26ec17696.html" title="hid&#45;transfer" alt="" coords="176,68,283,116"/>
+<area shape="rect" id="edge4" href="dir_000169_000177.html" title="10" alt="" coords="737,168,755,188"/>
+<area shape="rect" id="node15" href="dir_66020d87495305c57a7518f84f5c0ebc.html" title="massstorage" alt="" coords="37,68,152,116"/>
+<area shape="rect" id="edge20" href="dir_000157_000177.html" title="23" alt="" coords="736,169,755,189"/>
+<area shape="rect" id="graph3" href="dir_b4a7ade7464454668e92a582ad598ab2.html" alt="" coords="27,57,1677,127"/>
+<area shape="rect" id="graph2" href="dir_ce4acccb053335f480482dafe6c1964e.html" title="libusb" alt="" coords="16,16,1688,137"/>
+</map>
