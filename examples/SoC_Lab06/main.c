@@ -249,14 +249,25 @@ extern void print_time()
 	
 	// declarations
 	int month, day, year;
-	int hour, minute, PM;
+	int hour, minute, second;
+	bool PM;
 	
 	// sorting the values
 	year = ((RTC_CALR & 0x00000030) >> 4)*1000 + (RTC_CALR & 0x000000F)*100 + ((RTC_CALR & 0x0000F000) >> 12)*10 + ((RTC_CALR & 0x00000F00) >> 8);
-	
+	month = ((RTC_CALR & 0x000F0000) >> 16) + ((RTC_CALR & 0x00100000) >> 20)*10;
+	day = ((RTC_CALR & 0x0F000000) >> 24) + ((RTC_CALR & 0x30000000) >> 28)*10;
+	second = (RTC_TIMR & 0x0000000F) + ((RTC_TIMR & 0x00000070) >> 4)*10;
+	minute = ((RTC_TIMR & 0x00000F00) >> 8) + ((RTC_TIMR & 0x00007000) >> 12)*10;
+	hour = ((RTC_TIMR & 0x000F0000) >> 16) + ((RTC_TIMR & 0x00300000) >> 20)*10;
+	PM = ((RTC_TIMR & 0x00400000) >> 22);
 	
 	// print time
-	printf(" Date: %d \n\r Time: %#X\n\r", year, RTC_TIMR);
+	printf(" Date: %02d/%02d/%04d \n\r Time: %02d:%02d:%02d ", month, day, year, hour, minute, second);
+	
+	if (PM)
+		printf("PM\n\r");
+	else
+		printf("AM\n\r");
 	
 	//extra space
 	printf("\n\r");

@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\flash\Objects\getting-started.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\flash\Objects\getting-started.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060061: Last Updated: Mon Feb 01 19:04:44 2016
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060061: Last Updated: Mon Feb 01 20:29:28 2016
 <BR><P>
 <H3>Maximum Stack Usage =        200 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -236,11 +236,11 @@ Global Symbols
 <P><STRONG><a name="[bb]"></a>__rt_entry_postsh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000009))
 
 <P><STRONG><a name="[5a]"></a>__rt_entry_main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000D))
-<BR><BR>[Stack]<UL><LI>Max Depth = 192 + Unknown Stack Size
-<LI>Call Chain = __rt_entry_main &rArr; main &rArr; _DBGU_Handler &rArr; trng_test &rArr; PMC_DisablePeripheral &rArr; __aeabi_assert &rArr; __assert_puts &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
+<BR><BR>[Stack]<UL><LI>Max Depth = 200 + Unknown Stack Size
+<LI>Call Chain = __rt_entry_main &rArr; main &rArr; _DBGU_Handler &rArr; print_time &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit
-<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Calls]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit
 </UL>
 
 <P><STRONG><a name="[bc]"></a>__rt_entry_postli_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000C))
@@ -269,8 +269,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_char_file
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dummy_Handler
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;trng_test
+<BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;trng_test
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;struct_test
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setup_rtc
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read_chip_id
@@ -286,6 +285,7 @@ Global Symbols
 <LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardFault_Handler
 <LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BusFault_Handler
 <LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__assert_puts
+<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dummy_Handler
 </UL>
 
 <P><STRONG><a name="[64]"></a>_printf_pre_padding</STRONG> (Thumb, 44 bytes, Stack size 16 bytes, _printf_pad.o(.text))
@@ -343,8 +343,8 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 168 + Unknown Stack Size
 <LI>Call Chain = __aeabi_assert &rArr; __assert_puts &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;abort
-<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__assert_puts
+<BR>[Calls]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__assert_puts
+<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;abort
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PMC_EnablePeripheral
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PMC_DisablePeripheral
@@ -404,8 +404,8 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 120 + Unknown Stack Size
 <LI>Call Chain = _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_char_common
-<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ferror
+<BR>[Calls]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ferror
+<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_char_common
 </UL>
 <BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
@@ -414,9 +414,9 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 140 + Unknown Stack Size
 <LI>Call Chain = abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch &rArr; DBG_PutChar &rArr; DBG_Configure &rArr; PIO_Configure &rArr; PIO_SetPeripheralD
 </UL>
-<BR>[Calls]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_SIGABRT
+<BR>[Calls]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_exit
+<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_SIGABRT
 <LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_shutdown
-<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_exit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_assert
 </UL>
@@ -474,17 +474,17 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 152 + Unknown Stack Size
 <LI>Call Chain = BusFault_Handler &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StackUnwind
+<BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StackUnwind
+<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_sam.o(vectors)
 </UL>
 <P><STRONG><a name="[77]"></a>DBG_Configure</STRONG> (Thumb, 96 bytes, Stack size 40 bytes, dbg_console.o(i.DBG_Configure))
 <BR><BR>[Stack]<UL><LI>Max Depth = 76<LI>Call Chain = DBG_Configure &rArr; PIO_Configure &rArr; PIO_SetPeripheralD
 </UL>
-<BR>[Calls]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
-<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PMC_EnablePeripheral
+<BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PMC_EnablePeripheral
 <LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIO_Configure
+<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DBG_IsRxReady
 <LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DBG_GetChar
@@ -708,9 +708,9 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 152 + Unknown Stack Size
 <LI>Call Chain = HardFault_Handler &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StackUnwind
+<BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StackUnwind
 <LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardFault_reason
+<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_sam.o(vectors)
 </UL>
@@ -739,8 +739,8 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 152 + Unknown Stack Size
 <LI>Call Chain = MemManage_Handler &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StackUnwind
+<BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StackUnwind
+<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_sam.o(vectors)
 </UL>
@@ -821,9 +821,9 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_assert
 </UL>
-<BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DBG_Configure
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;trng_test
+<BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;trng_test
 <LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIO_Configure
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DBG_Configure
 </UL>
 
 <P><STRONG><a name="[83]"></a>PioInterruptHandler</STRONG> (Thumb, 100 bytes, Stack size 24 bytes, pio_it.o(i.PioInterruptHandler))
@@ -859,8 +859,8 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 152 + Unknown Stack Size
 <LI>Call Chain = UsageFault_Handler &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StackUnwind
+<BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StackUnwind
+<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_sam.o(vectors)
 </UL>
@@ -926,14 +926,14 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> _printf_char_file.o(.text)
 </UL>
 <P><STRONG><a name="[5b]"></a>main</STRONG> (Thumb, 116 bytes, Stack size 0 bytes, main.o(i.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 192 + Unknown Stack Size
-<LI>Call Chain = main &rArr; _DBGU_Handler &rArr; trng_test &rArr; PMC_DisablePeripheral &rArr; __aeabi_assert &rArr; __assert_puts &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
+<BR><BR>[Stack]<UL><LI>Max Depth = 200 + Unknown Stack Size
+<LI>Call Chain = main &rArr; _DBGU_Handler &rArr; print_time &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WDT_Disable
+<BR>[Calls]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WDT_Disable
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_screen
 <LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DBGU_Handler
 <LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SCB_EnableDCache
+<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
@@ -957,8 +957,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DBGU_Handler
 </UL>
 
-<P><STRONG><a name="[92]"></a>print_time</STRONG> (Thumb, 92 bytes, Stack size 8 bytes, main.o(i.print_time))
-<BR><BR>[Stack]<UL><LI>Max Depth = 152 + Unknown Stack Size
+<P><STRONG><a name="[92]"></a>print_time</STRONG> (Thumb, 260 bytes, Stack size 48 bytes, main.o(i.print_time))
+<BR><BR>[Stack]<UL><LI>Max Depth = 192 + Unknown Stack Size
 <LI>Call Chain = print_time &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
@@ -997,9 +997,9 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 184 + Unknown Stack Size
 <LI>Call Chain = trng_test &rArr; PMC_DisablePeripheral &rArr; __aeabi_assert &rArr; __assert_puts &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PMC_EnablePeripheral
+<BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PMC_EnablePeripheral
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PMC_DisablePeripheral
+<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DBGU_Handler
 </UL>
@@ -1014,11 +1014,10 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[8b]"></a>_DBGU_Handler</STRONG> (Thumb, 118 bytes, Stack size 8 bytes, main.o(i._DBGU_Handler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 192 + Unknown Stack Size
-<LI>Call Chain = _DBGU_Handler &rArr; trng_test &rArr; PMC_DisablePeripheral &rArr; __aeabi_assert &rArr; __assert_puts &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
+<BR><BR>[Stack]<UL><LI>Max Depth = 200 + Unknown Stack Size
+<LI>Call Chain = _DBGU_Handler &rArr; print_time &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DBG_IsRxReady
+<BR>[Calls]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DBG_IsRxReady
 <LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DBG_GetChar
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;trng_test
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;struct_test
@@ -1028,6 +1027,7 @@ Local Symbols
 <LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pointer_test
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_screen
 <LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;array_test
+<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
