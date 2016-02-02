@@ -20,7 +20,10 @@
 #define RTC_CR (*(uint32_t *)0x400E1860)
 #define RTC_MR (*(uint32_t *)0x400E1864)
 #define RTC_SR (*(uint32_t *)0x400E1878)
-
+#define RTC_SRC (*(uint32_t *)0x400E187C)
+#define RTC_TIMR (*(uint32_t *)0x400E1868)
+#define RTC_CALR (*(uint32_t *)0x400E186C)
+#define RTC_VER (*(uint32_t *)0x400E188C)
 
 // Global Struct for CHIP_ID
 struct CHIP_ID
@@ -186,13 +189,14 @@ extern void trng_test(void)
 	printf("\n\r");
 }
 
+// set the time and date to the past
 extern void setup_rtc()
 {
 	//extra space
 	printf("\n\r");
 	
 	// disable write protection
-	SYSC_WPMR = 0x52544301;
+	SYSC_WPMR = 0x52544300;
 		
 	// set the clock settings
 	RTC_MR = 0x00000001; // 12 hour mode, gregorian calender, no error correction, no output sources.
@@ -201,20 +205,61 @@ extern void setup_rtc()
 	RTC_CR = 0x00000003;
 	
 	// check var to see if we can make changes
-	uint32_t check;
-	check = (RTC_SR & 0x000000001);
+	uint32_t rCheck;
+	rCheck = (RTC_SR & 0x000000001);
 	
-	while (!check)
+	// wait until ready to write
+	while (!rCheck)
 	{
-		check = (RTC_SR & 0x000000001);
+		rCheck = (RTC_SR & 0x000000001);
 	}
-		
 	
+	// clears the write alarm
+	RTC_SRC = 0x00000001;
+	
+	// set the date
+	RTC_CALR = 0x12D15519; // nov 12th 1955
+	
+	//set time
+	RTC_TIMR = 0x00063800; // 6:38 AM
+	
+	// did we make it
+	uint32_t tCheck;
+	tCheck = RTC_VER;
+	
+	if (tCheck == 0x00000000)
+		printf(" Time travel completed Doc!\n\r");
+	else
+		printf(" Error, we're suck in the present Doc!\n\r");
+		
+	// set the update bits
+	RTC_CR = 0x00000000;
+	
+	// enable write protection
+	SYSC_WPMR = 0x52544301;
+	
+	//extra space
+	printf("\n\r");
 }
 
 extern void print_time()
 {
+	//extra space
+	printf("\n\r");
 	
+	// declarations
+	int month, day, year;
+	int hour, minute, PM;
+	
+	// sorting the values
+	year = ((RTC_CALR & 0x00000030) >> 4)*1000 + (RTC_CALR & 0x000000F)*100 + ((RTC_CALR & 0x0000F000) >> 12)*10 + ((RTC_CALR & 0x00000F00) >> 8);
+	
+	
+	// print time
+	printf(" Date: %d \n\r Time: %#X\n\r", year, RTC_TIMR);
+	
+	//extra space
+	printf("\n\r");
 }
 
 // This checks to see if a character was entered
