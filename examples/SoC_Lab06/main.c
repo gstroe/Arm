@@ -212,6 +212,8 @@ extern void setup_rtc()
 	while (!rCheck)
 	{
 		rCheck = (RTC_SR & 0x000000001);
+//		TimeTick_Configure();
+		Wait(100);
 	}
 	
 	// clears the write alarm
@@ -237,6 +239,10 @@ extern void setup_rtc()
 	
 	// enable write protection
 	SYSC_WPMR = 0x52544301;
+
+	// wait to prevent spam
+//	TimeTick_Configure();
+	Wait(100);
 	
 	//extra space
 	printf("\n\r");
@@ -268,6 +274,7 @@ extern void print_time()
 		printf("PM\n\r");
 	else
 		printf("AM\n\r");
+	
 	
 	//extra space
 	printf("\n\r");
@@ -330,6 +337,10 @@ extern int main( void )
 
 	/* Disable watchdog */
 	WDT_Disable(WDT);
+	
+	// wait for pins to cahnge
+	TimeTick_Configure();
+	Wait(100);
 
 
 	/* Enable I and D cache */
