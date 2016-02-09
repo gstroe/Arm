@@ -25,6 +25,16 @@
 #define RTC_CALR (*(uint32_t *)0x400E186C)
 #define RTC_VER (*(uint32_t *)0x400E188C)
 
+// pins
+#define SW0 {PIO_PA9, PIOA, ID_PIOA, PIO_PERIPH_A, PIO_DEFAULT}
+#define PD26 {PIO_PD26, PIOD, ID_PIOD, PIO_OUTPUT_0, PIO_DEFAULT}
+#define PA22 {PIO_PA22, PIOA, ID_PIOA, PIO_OUTPUT_0, PIO_DEFAULT}
+#define PC19 {PIO_PC19, PIOC, ID_PIOC, PIO_INPUT, PIO_DEFAULT}
+#define PA6 {PIO_PA6, PIOA, ID_PIOA, PIO_INPUT, PIO_DEFAULT}
+
+// SET UP PINS
+const Pin mypins[]= {SW0, PD26, PA22, PC19, PA6};
+
 
 // This function prints a menu in to the debug window every time it is called.
 extern void main_screen(void)
@@ -48,7 +58,23 @@ extern void main_screen(void)
 }
 
 // Menu Functions
-
+extern void Get_SW0()
+{
+	//extra space
+	printf("\n\r");
+	
+	bool pCheck;
+	
+	pCheck = PIO_Get(&mypins[0]);
+	
+	printf("The Switch is: ");
+	if (pCheck)
+		printf("Not Pushed\n\r");
+	else
+		printf("Pushed\n\r");
+	//extra space
+	printf("\n\r");
+}
 
 
 
@@ -77,6 +103,9 @@ static void _DBGU_Handler(void)
 		case '2':
 			LED_Toggle(1);
 			break;
+		case '3':
+			Get_SW0();
+			break;
 		case '*':
 			main_screen();
 			break;
@@ -101,6 +130,9 @@ extern int main( void )
 	// Setup LEDS
 	for(int i = 0; i < LED_NUM; i++)
 		LED_Configure(i);
+	
+	// SET UP PINS
+	PIO_Configure(mypins, PIO_LISTSIZE(mypins));
 
 	/* Enable I and D cache */
 	SCB_EnableICache();

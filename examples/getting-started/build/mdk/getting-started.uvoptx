@@ -75,7 +75,7 @@
       <OPTFL>
         <tvExp>1</tvExp>
         <tvExpOptDlg>0</tvExpOptDlg>
-        <IsCurrentTarget>1</IsCurrentTarget>
+        <IsCurrentTarget>0</IsCurrentTarget>
       </OPTFL>
       <CpuCode>16</CpuCode>
       <DebugOpt>
@@ -240,7 +240,7 @@
       <OPTFL>
         <tvExp>1</tvExp>
         <tvExpOptDlg>0</tvExpOptDlg>
-        <IsCurrentTarget>0</IsCurrentTarget>
+        <IsCurrentTarget>1</IsCurrentTarget>
       </OPTFL>
       <CpuCode>16</CpuCode>
       <DebugOpt>
@@ -307,7 +307,7 @@
         <SetRegEntry>
           <Number>0</Number>
           <Key>CMSIS_AGDI</Key>
-          <Name>-X"EDBG CMSIS-DAP" -UATML2407060200000059 -O206 -S0 -C0 -P00 -N00("ARM CoreSight SW-DP") -D00(0BD11477) -L00(0) -FO7 -FD20400000 -FC1000 -FN1 -FF0ATSAMV7x_2048 -FS0400000 -FL0200000 -FP0($$Device:ATSAMV71Q21$Flash\ATSAMV7x_2048.FLM)</Name>
+          <Name>-X"EDBG CMSIS-DAP" -UATML2407080200003230 -O206 -S0 -C0 -P00 -N00("ARM CoreSight SW-DP") -D00(0BD11477) -L00(0) -TO18 -TC10000000 -TP20 -TDS8007 -TDT0 -TDC1F -TIEFFFFFFFF -TIP8 -FO7 -FD20400000 -FC1000 -FN1 -FF0ATSAMV7x_2048.FLM -FS0400000 -FL0200000 -FP0($$Device:ATSAMV71Q21$Flash\ATSAMV7x_2048.FLM)</Name>
         </SetRegEntry>
         <SetRegEntry>
           <Number>0</Number>
