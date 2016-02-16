@@ -354,6 +354,7 @@ void PIO_Clear(const Pin *pin)
 	pin->pio->PIO_CODR = pin->mask;
 }
 
+
 /**
  * \brief Returns 1 if one or more PIO of the given Pin instance currently have
  * a high level; otherwise returns 0. This method returns the actual value that
@@ -378,6 +379,22 @@ unsigned char PIO_Get(const Pin *pin)
 		return 0;
 	else
 		return 1;
+}
+
+/**
+ * \brief Toggles the bit
+ * This has no immediate effects on PIOs that are not output, but the PIO
+ * controller will memorize the value they are changed to outputs.
+ *
+ * \param pin  Pointer to a Pin instance describing one or more pins.
+ */
+
+void PIO_Toggle(const Pin *pin)
+{
+	if ((bool)PIO_Get(pin))
+		PIO_Clear(pin);
+	else
+		PIO_Set(pin);
 }
 
 /**

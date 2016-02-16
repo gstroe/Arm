@@ -72,6 +72,23 @@ extern void Get_SW0()
 		printf("Not Pushed\n\r");
 	else
 		printf("Pushed\n\r");
+	
+	//extra space
+	printf("\n\r");
+}
+
+// Menu Functions
+extern void Toggle_Outputs()
+{
+	//extra space
+	printf("\n\r");
+	
+	// Toggle the first input
+	PIO_Toggle(&mypins[1]);
+	
+	// Toggle the first input
+	PIO_Toggle(&mypins[2]);
+	
 	//extra space
 	printf("\n\r");
 }
@@ -105,6 +122,9 @@ static void _DBGU_Handler(void)
 			break;
 		case '3':
 			Get_SW0();
+			break;
+		case '4':
+			Toggle_Outputs();
 			break;
 		case '*':
 			main_screen();
