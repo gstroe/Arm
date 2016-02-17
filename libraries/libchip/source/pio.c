@@ -380,12 +380,13 @@ unsigned char PIO_Get(const Pin *pin)
 		return 1;
 }
 
+
 void PIO_Toggle(const Pin *pin)
 {
-	if (PIO_Get(pin) == 0)
-		PIO_Set(pin);
-	else
+	if ((bool)PIO_Get(pin))
 		PIO_Clear(pin);
+	else
+		PIO_Set(pin);
 }
 
 /**

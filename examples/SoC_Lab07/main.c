@@ -77,10 +77,12 @@ extern void Get_SW0()
 	printf("\n\r");
 }
 
+
 extern void Toggle_Outputs()
 {
 	//extra space
 	printf("\n\r");
+
 	printf(" Toggling outputs...\r\n");
 	
 	// toggle
@@ -103,6 +105,13 @@ extern void Read_Inputs()
 	//print new outputs
 	printf(" PC19 output: %d\r\n", PIO_Get(&mypins[3]));
 	printf(" PA6  output: %d\r\n", PIO_Get(&mypins[4]));
+
+	// Toggle the first input
+	PIO_Toggle(&mypins[1]);
+	
+	// Toggle the first input
+	PIO_Toggle(&mypins[2]);
+
 	
 	//extra space
 	printf("\n\r");
@@ -144,6 +153,7 @@ static void _DBGU_Handler(void)
 		case '5':
 			Read_Inputs();
 			break;
+
 		case '*':
 			main_screen();
 			break;
@@ -160,7 +170,7 @@ extern int main( void )
 {
 
 	/* Disable watchdog */
-	WDT_Disable(WDT);
+5	WDT_Disable(WDT);
 	
 	// Set up wait timer
 	TimeTick_Configure();
