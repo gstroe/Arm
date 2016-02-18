@@ -135,6 +135,9 @@ static void _DBGU_Handler(void)
 	// Display the key to the user
 	printf("%c\n\r", key);
 	
+	//extra space
+	printf("\n\r");
+	
 	// execute aproprate function
 	switch (key)
 	{

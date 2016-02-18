@@ -767,7 +767,7 @@
             <hadIRAM>1</hadIRAM>
             <hadXRAM>0</hadXRAM>
             <uocXRam>0</uocXRam>
-            <RvdsVP>1</RvdsVP>
+            <RvdsVP>2</RvdsVP>
             <hadIRAM2>0</hadIRAM2>
             <hadIROM2>0</hadIROM2>
             <StupSel>8</StupSel>
@@ -915,7 +915,7 @@
             <vShortWch>0</vShortWch>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>BOARD_SAMV71_XULT __SAMV71Q21__ flash TRACE_LEVEL=4</Define>
+              <Define>BOARD_SAMV71_XULT __SAMV71Q21__ flash TRACE_LEVEL=5</Define>
               <Undefine></Undefine>
               <IncludePath>..\..\;..\..\..\..\libraries\libchip;..\..\..\..\libraries\libchip\include;..\..\..\..\libraries\libchip\include\samv71;..\..\..\..\libraries\libchip\include\cmsis\CMSIS\Include;..\..\..\..\libraries\libboard;..\..\..\..\libraries\libboard\include</IncludePath>
             </VariousControls>
