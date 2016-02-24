@@ -14,23 +14,14 @@
 #define TRNG_CR (*(uint32_t *)0x40070000)
 #define TRNG_STATUS (*(uint32_t *)0x4007001C)
 #define TRNG_DATA (*(uint32_t *)0x40070050)
-// System Write protection
-#define SYSC_WPMR (*(uint32_t *)0x400E18E4)
-// Real Time Clock
-#define RTC_CR (*(uint32_t *)0x400E1860)
-#define RTC_MR (*(uint32_t *)0x400E1864)
-#define RTC_SR (*(uint32_t *)0x400E1878)
-#define RTC_SRC (*(uint32_t *)0x400E187C)
-#define RTC_TIMR (*(uint32_t *)0x400E1868)
-#define RTC_CALR (*(uint32_t *)0x400E186C)
-#define RTC_VER (*(uint32_t *)0x400E188C)
+
 
 // pins
-#define SW0 {PIO_PA9, PIOA, ID_PIOA, PIO_PERIPH_A, PIO_DEFAULT}
+#define SW0 {PIO_PA9, PIOA, ID_PIOA, PIO_PERIPH_A, PIO_IT_RISE_EDGE}
 #define PD26 {PIO_PD26, PIOD, ID_PIOD, PIO_OUTPUT_0, PIO_DEFAULT}
 #define PA22 {PIO_PA22, PIOA, ID_PIOA, PIO_OUTPUT_1, PIO_DEFAULT}
-#define PC19 {PIO_PC19, PIOC, ID_PIOC, PIO_INPUT, PIO_DEFAULT}
-#define PA6 {PIO_PA6, PIOA, ID_PIOA, PIO_INPUT, PIO_DEFAULT}
+#define PC19 {PIO_PC19, PIOC, ID_PIOC, PIO_INPUT, PIO_IT_FALL_EDGE}
+#define PA6 {PIO_PA6, PIOA, ID_PIOA, PIO_INPUT, PIO_IT_FALL_EDGE}
 
 // SET UP PINS
 const Pin mypins[]= {SW0, PD26, PA22, PC19, PA6};
@@ -95,10 +86,29 @@ extern void Toggle_Outputs()
 	printf("\n\r");
 }
 
+void _PC19_it()
+{
+	
+}
+
+void _PA6_it()
+{
+	//extra space
+	printf("\n\r");
+	
+	//set debounce filter
+	PIO_SetDebounceFilter(&mypins[4], 10);
+	
+	//extra space
+	printf("\n\r");
+}
+
+
 extern void Read_Inputs()
 {
 	//extra space
 	printf("\n\r");
+		
 	
 	//print new outputs
 	printf(" PC19 output: %d\r\n", PIO_Get(&mypins[3]));
@@ -135,9 +145,9 @@ static void _DBGU_Handler(void)
 		case '2':
 			LED_Toggle(1);
 			break;
-		case '3':
-			Get_SW0();
-			break;
+		//case '3':
+			//Get_SW0();
+			//break;
 		case '4':
 			Toggle_Outputs();
 			break;
@@ -165,12 +175,21 @@ extern int main( void )
 	// Set up wait timer
 	TimeTick_Configure();
 	
+	// SET UP PINS
+	PIO_Configure(mypins, PIO_LISTSIZE(mypins));
+	
+	// enable PIO interupts
+	PIO_InitializeInterrupts(3);
+	PIO_ConfigureIt(&mypins[4],_PA6_it);
+	PIO_ConfigureIt(&mypins[3],_PC19_it);
+	PIO_ConfigureIt(&mypins[0],Get_SW0);
+	PIO_EnableIt(&mypins[4]);
+	PIO_EnableIt(&mypins[3]);
+	PIO_EnableIt(&mypins[0]);
+	
 	// Setup LEDS
 	for(int i = 0; i < LED_NUM; i++)
 		LED_Configure(i);
-	
-	// SET UP PINS
-	PIO_Configure(mypins, PIO_LISTSIZE(mypins));
 
 	/* Enable I and D cache */
 	SCB_EnableICache();

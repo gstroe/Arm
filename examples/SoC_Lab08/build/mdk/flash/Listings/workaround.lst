@@ -11,13 +11,13 @@ ARM Macro Assembler    Page 1
     5 00000004                 END
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M7 --apcs=interw
-ork --depend=.\flash\objects\workaround.d -o.\flash\objects\workaround.o -IG:\P
-rograms\Programs\Keil\ARM\examples\Atmel\SAM71_Xplained_Ultra\examples\SoC_Lab0
-7\build\mdk\RTE -IG:\Programs\Programs\Keil\ARM\PACK\Keil\SAM-V_DFP\2.2.0\SAMV7
-1\include -IG:\Programs\Programs\Keil\ARM\CMSIS\Include -IG:\Programs\Programs\
-Keil\ARM\PACK\Keil\SAM-V_DFP\2.2.0\Device\SAMV71\Include --predefine="__UVISION
-_VERSION SETA 517" --predefine="__SAMV71Q21__ SETA 1" --list=.\flash\listings\w
-orkaround.lst ..\..\..\..\libraries\libboard\resources_v71\mdk\workaround.s
+ork --depend=.\flash\objects\workaround.d -o.\flash\objects\workaround.o -IC:\K
+eil_v5\ARM\examples\Atmel\SAMV71_Xplained_Ultra\examples\SoC_Lab08\build\mdk\RT
+E -IC:\Keil_v5\ARM\PACK\Keil\SAM-V_DFP\2.2.0\SAMV71\include -IC:\Keil_v5\ARM\CM
+SIS\Include -IC:\Keil_v5\ARM\PACK\Keil\SAM-V_DFP\2.2.0\Device\SAMV71\Include --
+predefine="__UVISION_VERSION SETA 517" --predefine="__SAMV71Q21__ SETA 1" --lis
+t=.\flash\listings\workaround.lst ..\..\..\..\libraries\libboard\resources_v71\
+mdk\workaround.s
 
 
 
