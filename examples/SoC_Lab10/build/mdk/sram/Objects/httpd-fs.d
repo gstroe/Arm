@@ -1,0 +1,14 @@
+.\sram\objects\httpd-fs.o: ..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fs.c
+.\sram\objects\httpd-fs.o: ..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd.h
+.\sram\objects\httpd-fs.o: ..\..\..\..\libraries\libuip\source\uip_1.0\uip\psock.h
+.\sram\objects\httpd-fs.o: ..\..\..\..\libraries\libuip\source\uip_1.0\uip\uipopt.h
+.\sram\objects\httpd-fs.o: ..\..\uip-conf.h
+.\sram\objects\httpd-fs.o: ..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\webserver.h
+.\sram\objects\httpd-fs.o: ..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd.h
+.\sram\objects\httpd-fs.o: ..\..\..\..\libraries\libuip\source\uip_1.0\uip\pt.h
+.\sram\objects\httpd-fs.o: ..\..\..\..\libraries\libuip\source\uip_1.0\uip\lc.h
+.\sram\objects\httpd-fs.o: ..\..\..\..\libraries\libuip\source\uip_1.0\uip\lc-switch.h
+.\sram\objects\httpd-fs.o: ..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fs.h
+.\sram\objects\httpd-fs.o: ..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fsdata.h
+.\sram\objects\httpd-fs.o: ..\..\..\..\libraries\libuip\source\uip_1.0\uip\uip.h
+.\sram\objects\httpd-fs.o: ..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fsdata.c

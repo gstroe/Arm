@@ -198,10 +198,6 @@ extern void PIO_Clear(const Pin *pin);
 
 extern uint8_t PIO_Get(const Pin *pin);
 
-extern void PIO_Toggle(const Pin *pin);
-
-extern uint8_t PIO_Get(const Pin *pin);
-
 extern uint8_t PIO_GetOutputDataStatus(const Pin *pin);
 
 extern void PIO_SetDebounceFilter(const Pin *pin, uint32_t cuttoff);

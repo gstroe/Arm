@@ -1,0 +1,173 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.17.0.0
+Copyright (C) 2015 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Gabriel Stroe LTU Flex license: MDK-ARM Professional: 100 user(s) (mdk_pro) Operation stops: 11 Jan 2017
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional: 100 user(s)  Version: 5.17
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 1 (build 61)
+Assembler:       Armasm.exe V5.06 update 1 (build 61)
+Linker/Locator:  ArmLink.exe V5.06 update 1 (build 61)
+Library Manager: ArmAr.exe V5.06 update 1 (build 61)
+Hex Converter:   FromElf.exe V5.06 update 1 (build 61)
+CPU DLL:         SARMCM3.DLL V5.17
+Dialog DLL:      DCM.DLL V1.13.4.0
+Target DLL:      Segger\JL2CM3.dll V2.99.16.0
+Dialog DLL:      TCM.DLL V1.14.6.0
+ 
+<h2>Project:</h2>
+C:\Keil_v5\ARM\examples\Atmel\SAMV71_Xplained_Ultra\examples_ethernet\gmac_uip_webserver\build\mdk\gmac_uip_webserver.uvprojx
+Project File Date:  03/14/2016
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 1 (build 61)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Rebuild target 'sram'
+assembling workaround.s...
+compiling exceptions.c...
+compiling main.c...
+compiling mpu.c...
+compiling pio_it.c...
+compiling pio.c...
+compiling pmc.c...
+compiling supc.c...
+compiling tc.c...
+compiling timetick.c...
+compiling wdt.c...
+compiling uart.c...
+compiling xdma_hardware_interface.c...
+compiling xdmad.c...
+compiling xdmac.c...
+compiling retarget.c...
+compiling system_samv71.c...
+compiling startup_sam.c...
+compiling gmac.c...
+compiling twi.c...
+compiling gmacd.c...
+compiling twid.c...
+compiling board_lowlevel.c...
+compiling board_memories.c...
+compiling dbg_console.c...
+compiling led.c...
+compiling trace.c...
+compiling gmacb_phy.c...
+compiling httpd-cgi.c...
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-cgi.c(67): warning:  #550-D: variable "PT_YIELD_FLAG" was set but never used
+    PSOCK_BEGIN(&s->sout);
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-cgi.c(95): warning:  #550-D: variable "PT_YIELD_FLAG" was set but never used
+    PSOCK_BEGIN(&s->sout);
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-cgi.c(167): warning:  #550-D: variable "PT_YIELD_FLAG" was set but never used
+    PSOCK_BEGIN(&s->sout);
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-cgi.c(189): warning:  #550-D: variable "PT_YIELD_FLAG" was set but never used
+    PSOCK_BEGIN(&s->sout);
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-cgi.c: 4 warnings, 0 errors
+compiling httpd.c...
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd.c(97): warning:  #550-D: variable "PT_YIELD_FLAG" was set but never used
+    PSOCK_BEGIN(&s->sout);
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd.c(111): warning:  #550-D: variable "PT_YIELD_FLAG" was set but never used
+    PSOCK_BEGIN(&s->sout);
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd.c(132): warning:  #550-D: variable "PT_YIELD_FLAG" was set but never used
+    PT_BEGIN(&s->scriptpt);
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd.c(192): warning:  #550-D: variable "PT_YIELD_FLAG" was set but never used
+    PSOCK_BEGIN(&s->sout);
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd.c(221): warning:  #550-D: variable "PT_YIELD_FLAG" was set but never used
+    PT_BEGIN(&s->outputpt);
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd.c(251): warning:  #550-D: variable "PT_YIELD_FLAG" was set but never used
+    PSOCK_BEGIN(&s->sin);
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd.c: 6 warnings, 0 errors
+compiling httpd-fs.c...
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fsdata.c(585): warning:  #144-D: a value of type "const unsigned char *" cannot be used to initialize an entity of type "const char *"
+  const struct httpd_fsdata_file file_processes_shtml[] = {{
+ULL, data_processes_shtml, data_processes_shtml + 17, sizeof(data_processes_shtml) - 17}};
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fsdata.c(585): warning:  #144-D: a value of type "const unsigned char *" cannot be used to initialize an entity of type "const char *"
+  const struct httpd_fsdata_file file_processes_shtml[] = {{
+ULL, data_processes_shtml, data_processes_shtml + 17, sizeof(data_processes_shtml) - 17}};
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fsdata.c(587): warning:  #144-D: a value of type "const unsigned char *" cannot be used to initialize an entity of type "const char *"
+  const struct httpd_fsdata_file file_404_html[] = {{file_processes_shtml, data_404_html, data_404_html + 10, sizeof(data_404_html) - 10}};
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fsdata.c(587): warning:  #144-D: a value of type "const unsigned char *" cannot be used to initialize an entity of type "const char *"
+  const struct httpd_fsdata_file file_404_html[] = {{file_processes_shtml, data_404_html, data_404_html + 10, sizeof(data_404_html) - 10}};
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fsdata.c(589): warning:  #144-D: a value of type "const unsigned char *" cannot be used to initialize an entity of type "const char *"
+  const struct httpd_fsdata_file file_files_shtml[] = {{file_404_html, data_files_shtml, data_files_shtml + 13, sizeof(data_files_shtml) - 13}};
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fsdata.c(589): warning:  #144-D: a value of type "const unsigned char *" cannot be used to initialize an entity of type "const char *"
+  const struct httpd_fsdata_file file_files_shtml[] = {{file_404_html, data_files_shtml, data_files_shtml + 13, sizeof(data_files_shtml) - 13}};
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fsdata.c(591): warning:  #144-D: a value of type "const unsigned char *" cannot be used to initialize an entity of type "const char *"
+  const struct httpd_fsdata_file file_footer_html[] = {{file_files_shtml, data_footer_html, data_footer_html + 13, sizeof(data_footer_html) - 13}};
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fsdata.c(591): warning:  #144-D: a value of type "const unsigned char *" cannot be used to initialize an entity of type "const char *"
+  const struct httpd_fsdata_file file_footer_html[] = {{file_files_shtml, data_footer_html, data_footer_html + 13, sizeof(data_footer_html) - 13}};
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fsdata.c(593): warning:  #144-D: a value of type "const unsigned char *" cannot be used to initialize an entity of type "const char *"
+  const struct httpd_fsdata_file file_header_html[] = {{file_footer_html, data_header_html, data_header_html + 13, sizeof(data_header_html) - 13}};
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fsdata.c(593): warning:  #144-D: a value of type "const unsigned char *" cannot be used to initialize an entity of type "const char *"
+  const struct httpd_fsdata_file file_header_html[] = {{file_footer_html, data_header_html, data_header_html + 13, sizeof(data_header_html) - 13}};
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fsdata.c(595): warning:  #144-D: a value of type "const unsigned char *" cannot be used to initialize an entity of type "const char *"
+  const struct httpd_fsdata_file file_index_html[] = {{file_header_html, data_index_html, data_index_html + 12, sizeof(data_index_html) - 12}};
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fsdata.c(595): warning:  #144-D: a value of type "const unsigned char *" cannot be used to initialize an entity of type "const char *"
+  const struct httpd_fsdata_file file_index_html[] = {{file_header_html, data_index_html, data_index_html + 12, sizeof(data_index_html) - 12}};
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fsdata.c(597): warning:  #144-D: a value of type "const unsigned char *" cannot be used to initialize an entity of type "const char *"
+  const struct httpd_fsdata_file file_style_css[] = {{file_index_html, data_style_css, data_style_css + 11, sizeof(data_style_css) - 11}};
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fsdata.c(597): warning:  #144-D: a value of type "const unsigned char *" cannot be used to initialize an entity of type "const char *"
+  const struct httpd_fsdata_file file_style_css[] = {{file_index_html, data_style_css, data_style_css + 11, sizeof(data_style_css) - 11}};
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fsdata.c(599): warning:  #144-D: a value of type "const unsigned char *" cannot be used to initialize an entity of type "const char *"
+  const struct httpd_fsdata_file file_tcp_shtml[] = {{file_style_css, data_tcp_shtml, data_tcp_shtml + 11, sizeof(data_tcp_shtml) - 11}};
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fsdata.c(599): warning:  #144-D: a value of type "const unsigned char *" cannot be used to initialize an entity of type "const char *"
+  const struct httpd_fsdata_file file_tcp_shtml[] = {{file_style_css, data_tcp_shtml, data_tcp_shtml + 11, sizeof(data_tcp_shtml) - 11}};
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fsdata.c(601): warning:  #144-D: a value of type "const unsigned char *" cannot be used to initialize an entity of type "const char *"
+  const struct httpd_fsdata_file file_fade_png[] = {{file_tcp_shtml, data_fade_png, data_fade_png + 10, sizeof(data_fade_png) - 10}};
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fsdata.c(601): warning:  #144-D: a value of type "const unsigned char *" cannot be used to initialize an entity of type "const char *"
+  const struct httpd_fsdata_file file_fade_png[] = {{file_tcp_shtml, data_fade_png, data_fade_png + 10, sizeof(data_fade_png) - 10}};
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fsdata.c(603): warning:  #144-D: a value of type "const unsigned char *" cannot be used to initialize an entity of type "const char *"
+  const struct httpd_fsdata_file file_stats_shtml[] = {{file_fade_png, data_stats_shtml, data_stats_shtml + 13, sizeof(data_stats_shtml) - 13}};
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fsdata.c(603): warning:  #144-D: a value of type "const unsigned char *" cannot be used to initialize an entity of type "const char *"
+  const struct httpd_fsdata_file file_stats_shtml[] = {{file_fade_png, data_stats_shtml, data_stats_shtml + 13, sizeof(data_stats_shtml) - 13}};
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fs.c: 20 warnings, 0 errors
+compiling http-strings.c...
+compiling memb.c...
+..\..\..\..\libraries\libuip\source\uip_1.0\lib\memb.c(100): warning:  #68-D: integer conversion resulted in a change of sign
+    return -1;
+..\..\..\..\libraries\libuip\source\uip_1.0\lib\memb.c: 1 warning, 0 errors
+compiling psock.c...
+..\..\..\..\libraries\libuip\source\uip_1.0\uip\psock.c(188): warning:  #513-D: a value of type "const char *" cannot be assigned to an entity of type "const u8_t *"
+    s->sendptr = buf;
+..\..\..\..\libraries\libuip\source\uip_1.0\uip\psock.c(179): warning:  #550-D: variable "PT_YIELD_FLAG" was set but never used
+    PT_BEGIN(&s->psockpt);
+..\..\..\..\libraries\libuip\source\uip_1.0\uip\psock.c(218): warning:  #550-D: variable "PT_YIELD_FLAG" was set but never used
+    PT_BEGIN(&s->psockpt);
+..\..\..\..\libraries\libuip\source\uip_1.0\uip\psock.c(276): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8_t *"
+    buf_setup(&psock->buf, psock->bufptr, psock->bufsize);
+..\..\..\..\libraries\libuip\source\uip_1.0\uip\psock.c(274): warning:  #550-D: variable "PT_YIELD_FLAG" was set but never used
+    PT_BEGIN(&psock->psockpt);
+..\..\..\..\libraries\libuip\source\uip_1.0\uip\psock.c(303): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8_t *"
+    buf_setup(&psock->buf, psock->bufptr, psock->bufsize);
+..\..\..\..\libraries\libuip\source\uip_1.0\uip\psock.c(301): warning:  #550-D: variable "PT_YIELD_FLAG" was set but never used
+    PT_BEGIN(&psock->psockpt);
+..\..\..\..\libraries\libuip\source\uip_1.0\uip\psock.c(334): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8_t *"
+    buf_setup(&psock->buf, buffer, buffersize);
+..\..\..\..\libraries\libuip\source\uip_1.0\uip\psock.c: 8 warnings, 0 errors
+compiling timer.c...
+compiling uip-fw.c...
+compiling uip.c...
+..\..\..\..\libraries\libuip\source\uip_1.0\uip\uip.c(1847): warning:  #177-D: label "ip_send_nolen" was declared but never referenced
+   ip_send_nolen:
+..\..\..\..\libraries\libuip\source\uip_1.0\uip\uip.c(113): warning:  #177-D: variable "all_ones_addr" was declared but never referenced
+  static const uip_ipaddr_t all_ones_addr =
+..\..\..\..\libraries\libuip\source\uip_1.0\uip\uip.c: 2 warnings, 0 errors
+compiling uip_arp.c...
+compiling clock-arch.c...
+compiling gmac_tapdev.c...
+compiling uiplib.c...
+linking...
+Program Size: Code=26108 RO-data=7300 RW-data=864 ZI-data=122956  
+".\sram\Objects\gmac_uip_webserver.axf" - 0 Error(s), 41 Warning(s).
+
+<h2>Collection of Component include folders:</h2>
+  C:\Keil_v5\ARM\examples\Atmel\SAMV71_Xplained_Ultra\examples_ethernet\gmac_uip_webserver\build\mdk\RTE
+  C:\Keil_v5\ARM\PACK\Keil\SAM-V_DFP\2.2.0\SAMV71\include
+
+<h2>Collection of Component Files used:</h2>
+Build Time Elapsed:  00:00:46
+</pre>
+</body>
+</html>

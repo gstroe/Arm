@@ -1,0 +1,13 @@
+.\flash\objects\uiplib.o: ..\..\..\..\libraries\libuip\source\uip_1.0\uip\uiplib.c
+.\flash\objects\uiplib.o: ..\..\..\..\libraries\libuip\source\uip_1.0\uip\uip.h
+.\flash\objects\uiplib.o: ..\..\..\..\libraries\libuip\source\uip_1.0\uip\uipopt.h
+.\flash\objects\uiplib.o: ..\..\uip-conf.h
+.\flash\objects\uiplib.o: ..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\webserver.h
+.\flash\objects\uiplib.o: ..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd.h
+.\flash\objects\uiplib.o: ..\..\..\..\libraries\libuip\source\uip_1.0\uip\psock.h
+.\flash\objects\uiplib.o: ..\..\..\..\libraries\libuip\source\uip_1.0\uip\uipopt.h
+.\flash\objects\uiplib.o: ..\..\..\..\libraries\libuip\source\uip_1.0\uip\pt.h
+.\flash\objects\uiplib.o: ..\..\..\..\libraries\libuip\source\uip_1.0\uip\lc.h
+.\flash\objects\uiplib.o: ..\..\..\..\libraries\libuip\source\uip_1.0\uip\lc-switch.h
+.\flash\objects\uiplib.o: ..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fs.h
+.\flash\objects\uiplib.o: ..\..\..\..\libraries\libuip\source\uip_1.0\uip\uiplib.h

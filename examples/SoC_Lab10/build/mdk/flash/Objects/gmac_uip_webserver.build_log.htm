@@ -1,0 +1,93 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.17.0.0
+Copyright (C) 2015 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Gabriel Stroe LTU Flex license: MDK-ARM Professional: 100 user(s) (mdk_pro) Operation stops: 11 Jan 2017
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional: 100 user(s)  Version: 5.17
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 1 (build 61)
+Assembler:       Armasm.exe V5.06 update 1 (build 61)
+Linker/Locator:  ArmLink.exe V5.06 update 1 (build 61)
+Library Manager: ArmAr.exe V5.06 update 1 (build 61)
+Hex Converter:   FromElf.exe V5.06 update 1 (build 61)
+CPU DLL:         SARMCM3.DLL V5.17
+Dialog DLL:      DCM.DLL V1.13.4.0
+Target DLL:      CMSIS_AGDI.dll V1.23.1.0
+Dialog DLL:      TCM.DLL V1.14.6.0
+ 
+<h2>Project:</h2>
+C:\Keil_v5\ARM\examples\Atmel\SAMV71_Xplained_Ultra\examples\SoC_Lab10\build\mdk\SoC_Lab10.uvprojx
+Project File Date:  03/30/2016
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 1 (build 61)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'flash'
+compiling httpd-fs.c...
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fsdata.c(630): warning:  #144-D: a value of type "const unsigned char *" cannot be used to initialize an entity of type "const char *"
+  const struct httpd_fsdata_file file_processes_shtml[] = {{
+ULL, data_processes_shtml, data_processes_shtml + 17, sizeof(data_processes_shtml) - 17}};
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fsdata.c(630): warning:  #144-D: a value of type "const unsigned char *" cannot be used to initialize an entity of type "const char *"
+  const struct httpd_fsdata_file file_processes_shtml[] = {{
+ULL, data_processes_shtml, data_processes_shtml + 17, sizeof(data_processes_shtml) - 17}};
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fsdata.c(632): warning:  #144-D: a value of type "const unsigned char *" cannot be used to initialize an entity of type "const char *"
+  const struct httpd_fsdata_file file_404_html[] = {{file_processes_shtml, data_404_html, data_404_html + 10, sizeof(data_404_html) - 10}};
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fsdata.c(632): warning:  #144-D: a value of type "const unsigned char *" cannot be used to initialize an entity of type "const char *"
+  const struct httpd_fsdata_file file_404_html[] = {{file_processes_shtml, data_404_html, data_404_html + 10, sizeof(data_404_html) - 10}};
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fsdata.c(634): warning:  #144-D: a value of type "const unsigned char *" cannot be used to initialize an entity of type "const char *"
+  const struct httpd_fsdata_file file_files_shtml[] = {{file_404_html, data_files_shtml, data_files_shtml + 13, sizeof(data_files_shtml) - 13}};
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fsdata.c(634): warning:  #144-D: a value of type "const unsigned char *" cannot be used to initialize an entity of type "const char *"
+  const struct httpd_fsdata_file file_files_shtml[] = {{file_404_html, data_files_shtml, data_files_shtml + 13, sizeof(data_files_shtml) - 13}};
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fsdata.c(636): warning:  #144-D: a value of type "const unsigned char *" cannot be used to initialize an entity of type "const char *"
+  const struct httpd_fsdata_file file_footer_html[] = {{file_files_shtml, data_footer_html, data_footer_html + 13, sizeof(data_footer_html) - 13}};
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fsdata.c(636): warning:  #144-D: a value of type "const unsigned char *" cannot be used to initialize an entity of type "const char *"
+  const struct httpd_fsdata_file file_footer_html[] = {{file_files_shtml, data_footer_html, data_footer_html + 13, sizeof(data_footer_html) - 13}};
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fsdata.c(638): warning:  #144-D: a value of type "const unsigned char *" cannot be used to initialize an entity of type "const char *"
+  const struct httpd_fsdata_file file_header_html[] = {{file_footer_html, data_header_html, data_header_html + 13, sizeof(data_header_html) - 13}};
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fsdata.c(638): warning:  #144-D: a value of type "const unsigned char *" cannot be used to initialize an entity of type "const char *"
+  const struct httpd_fsdata_file file_header_html[] = {{file_footer_html, data_header_html, data_header_html + 13, sizeof(data_header_html) - 13}};
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fsdata.c(640): error:  #20: identifier "http_index_html" is undefined
+  const struct httpd_fsdata_file file_index_html[] = {{file_header_html, http_index_html, data_index_html, sizeof(data_index_html)}};
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fsdata.c(640): warning:  #144-D: a value of type "const unsigned char *" cannot be used to initialize an entity of type "const char *"
+  const struct httpd_fsdata_file file_index_html[] = {{file_header_html, http_index_html, data_index_html, sizeof(data_index_html)}};
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fsdata.c(642): error:  #28: expression must have a constant value
+  const struct httpd_fsdata_file file_style_css[] = {{file_index_html, data_style_css, data_style_css + 11, sizeof(data_style_css) - 11}};
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fsdata.c(642): warning:  #144-D: a value of type "const unsigned char *" cannot be used to initialize an entity of type "const char *"
+  const struct httpd_fsdata_file file_style_css[] = {{file_index_html, data_style_css, data_style_css + 11, sizeof(data_style_css) - 11}};
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fsdata.c(642): warning:  #144-D: a value of type "const unsigned char *" cannot be used to initialize an entity of type "const char *"
+  const struct httpd_fsdata_file file_style_css[] = {{file_index_html, data_style_css, data_style_css + 11, sizeof(data_style_css) - 11}};
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fsdata.c(644): error:  #28: expression must have a constant value
+  const struct httpd_fsdata_file file_tcp_shtml[] = {{file_style_css, data_tcp_shtml, data_tcp_shtml + 11, sizeof(data_tcp_shtml) - 11}};
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fsdata.c(644): warning:  #144-D: a value of type "const unsigned char *" cannot be used to initialize an entity of type "const char *"
+  const struct httpd_fsdata_file file_tcp_shtml[] = {{file_style_css, data_tcp_shtml, data_tcp_shtml + 11, sizeof(data_tcp_shtml) - 11}};
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fsdata.c(644): warning:  #144-D: a value of type "const unsigned char *" cannot be used to initialize an entity of type "const char *"
+  const struct httpd_fsdata_file file_tcp_shtml[] = {{file_style_css, data_tcp_shtml, data_tcp_shtml + 11, sizeof(data_tcp_shtml) - 11}};
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fsdata.c(646): error:  #28: expression must have a constant value
+  const struct httpd_fsdata_file file_fade_png[] = {{file_tcp_shtml, data_fade_png, data_fade_png + 10, sizeof(data_fade_png) - 10}};
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fsdata.c(646): warning:  #144-D: a value of type "const unsigned char *" cannot be used to initialize an entity of type "const char *"
+  const struct httpd_fsdata_file file_fade_png[] = {{file_tcp_shtml, data_fade_png, data_fade_png + 10, sizeof(data_fade_png) - 10}};
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fsdata.c(646): warning:  #144-D: a value of type "const unsigned char *" cannot be used to initialize an entity of type "const char *"
+  const struct httpd_fsdata_file file_fade_png[] = {{file_tcp_shtml, data_fade_png, data_fade_png + 10, sizeof(data_fade_png) - 10}};
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fsdata.c(648): error:  #28: expression must have a constant value
+  const struct httpd_fsdata_file file_stats_shtml[] = {{file_fade_png, data_stats_shtml, data_stats_shtml + 13, sizeof(data_stats_shtml) - 13}};
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fsdata.c(648): warning:  #144-D: a value of type "const unsigned char *" cannot be used to initialize an entity of type "const char *"
+  const struct httpd_fsdata_file file_stats_shtml[] = {{file_fade_png, data_stats_shtml, data_stats_shtml + 13, sizeof(data_stats_shtml) - 13}};
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fsdata.c(648): warning:  #144-D: a value of type "const unsigned char *" cannot be used to initialize an entity of type "const char *"
+  const struct httpd_fsdata_file file_stats_shtml[] = {{file_fade_png, data_stats_shtml, data_stats_shtml + 13, sizeof(data_stats_shtml) - 13}};
+..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fs.c: 19 warnings, 5 errors
+".\flash\Objects\gmac_uip_webserver.axf" - 5 Error(s), 19 Warning(s).
+
+<h2>Collection of Component include folders:</h2>
+  C:\Keil_v5\ARM\examples\Atmel\SAMV71_Xplained_Ultra\examples\SoC_Lab10\build\mdk\RTE
+  C:\Keil_v5\ARM\PACK\Keil\SAM-V_DFP\2.2.0\SAMV71\include
+
+<h2>Collection of Component Files used:</h2>
+Target not created.
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>

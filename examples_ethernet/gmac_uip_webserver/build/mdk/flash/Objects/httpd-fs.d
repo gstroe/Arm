@@ -1,0 +1,14 @@
+.\flash\objects\httpd-fs.o: ..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fs.c
+.\flash\objects\httpd-fs.o: ..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd.h
+.\flash\objects\httpd-fs.o: ..\..\..\..\libraries\libuip\source\uip_1.0\uip\psock.h
+.\flash\objects\httpd-fs.o: ..\..\..\..\libraries\libuip\source\uip_1.0\uip\uipopt.h
+.\flash\objects\httpd-fs.o: ..\..\uip-conf.h
+.\flash\objects\httpd-fs.o: ..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\webserver.h
+.\flash\objects\httpd-fs.o: ..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd.h
+.\flash\objects\httpd-fs.o: ..\..\..\..\libraries\libuip\source\uip_1.0\uip\pt.h
+.\flash\objects\httpd-fs.o: ..\..\..\..\libraries\libuip\source\uip_1.0\uip\lc.h
+.\flash\objects\httpd-fs.o: ..\..\..\..\libraries\libuip\source\uip_1.0\uip\lc-switch.h
+.\flash\objects\httpd-fs.o: ..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fs.h
+.\flash\objects\httpd-fs.o: ..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fsdata.h
+.\flash\objects\httpd-fs.o: ..\..\..\..\libraries\libuip\source\uip_1.0\uip\uip.h
+.\flash\objects\httpd-fs.o: ..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fsdata.c

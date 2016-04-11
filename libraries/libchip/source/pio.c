@@ -380,15 +380,6 @@ unsigned char PIO_Get(const Pin *pin)
 		return 1;
 }
 
-
-void PIO_Toggle(const Pin *pin)
-{
-	if ((bool)PIO_Get(pin))
-		PIO_Clear(pin);
-	else
-		PIO_Set(pin);
-}
-
 /**
  * \brief Returns 1 if one or more PIO of the given Pin are configured to output
  * a high level (even if they are not output).

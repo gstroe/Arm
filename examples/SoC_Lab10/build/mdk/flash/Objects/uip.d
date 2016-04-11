@@ -1,0 +1,15 @@
+.\flash\objects\uip.o: ..\..\..\..\libraries\libuip\source\uip_1.0\uip\uip.c
+.\flash\objects\uip.o: ..\..\..\..\libraries\libuip\source\uip_1.0\uip\uip.h
+.\flash\objects\uip.o: ..\..\..\..\libraries\libuip\source\uip_1.0\uip\uipopt.h
+.\flash\objects\uip.o: ..\..\uip-conf.h
+.\flash\objects\uip.o: ..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\webserver.h
+.\flash\objects\uip.o: ..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd.h
+.\flash\objects\uip.o: ..\..\..\..\libraries\libuip\source\uip_1.0\uip\psock.h
+.\flash\objects\uip.o: ..\..\..\..\libraries\libuip\source\uip_1.0\uip\uipopt.h
+.\flash\objects\uip.o: ..\..\..\..\libraries\libuip\source\uip_1.0\uip\pt.h
+.\flash\objects\uip.o: ..\..\..\..\libraries\libuip\source\uip_1.0\uip\lc.h
+.\flash\objects\uip.o: ..\..\..\..\libraries\libuip\source\uip_1.0\uip\lc-switch.h
+.\flash\objects\uip.o: ..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fs.h
+.\flash\objects\uip.o: ..\..\..\..\libraries\libuip\source\uip_1.0\uip\uip_arch.h
+.\flash\objects\uip.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\flash\objects\uip.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
