@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\flash\Objects\gmac_uip_webserver.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\flash\Objects\gmac_uip_webserver.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060061: Last Updated: Mon Apr 11 17:58:03 2016
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060061: Last Updated: Wed Apr 13 18:47:13 2016
 <BR><P>
 <H3>Maximum Stack Usage =        400 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -253,8 +253,8 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 400 + Unknown Stack Size
 <LI>Call Chain = __rt_entry_main &rArr; main &rArr; gmac_tapdev_init &rArr; GMACB_AutoNegotiate &rArr; GMACB_DumpRegisters &rArr; GMACB_ReadPhy &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit
-<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit
 </UL>
 
 <P><STRONG><a name="[143]"></a>__rt_entry_postli_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000C))
@@ -283,7 +283,19 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_char_file
 </UL>
-<BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__assert_puts
+<BR>[Called By]<UL><LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gmac_tapdev_send
+<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gmac_tapdev_init
+<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TimeTick_Configure
+<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TWID_Read
+<LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_log
+<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_app_init
+<LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UsageFault_Handler
+<LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NMI_Handler
+<LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MemManage_Handler
+<LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardFault_Handler
+<LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BusFault_Handler
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__assert_puts
 <LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GMAC_SetMdcClock
 <LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dummy_Handler
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GMACB_ResetPhy
@@ -296,18 +308,6 @@ Global Symbols
 <LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GMACD_SendSG
 <LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GMACD_Poll
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GMACD_Handler
-<LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gmac_tapdev_send
-<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gmac_tapdev_init
-<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TimeTick_Configure
-<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TWID_Read
-<LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_log
-<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_app_init
-<LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UsageFault_Handler
-<LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NMI_Handler
-<LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MemManage_Handler
-<LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardFault_Handler
-<LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BusFault_Handler
 </UL>
 
 <P><STRONG><a name="[6c]"></a>__2snprintf</STRONG> (Thumb, 50 bytes, Stack size 40 bytes, __2snprintf.o(.text))
@@ -381,20 +381,20 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__assert_puts
 <LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;abort
 </UL>
-<BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Wait
-<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetTicks
-<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetDelayInTicks
-<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TWI_Stop
-<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TWI_StartRead
-<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TWI_ReadByte
-<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TWI_EnableIt
-<LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TWI_ConfigureMaster
+<BR>[Called By]<UL><LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TWI_ConfigureMaster
 <LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TWID_Read
 <LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TWID_Initialize
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PMC_EnablePeripheral
 <LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TC_Start
 <LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TC_Configure
 <LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PioInterruptHandler
+<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Wait
+<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetTicks
+<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetDelayInTicks
+<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TWI_Stop
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TWI_StartRead
+<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TWI_ReadByte
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TWI_EnableIt
 </UL>
 
 <P><STRONG><a name="[148]"></a>__assert</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, assert.o(.text), UNUSED)
@@ -448,9 +448,9 @@ Global Symbols
 <P><STRONG><a name="[7a]"></a>__aeabi_memcpy4</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, rt_memcpy_w.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __aeabi_memcpy4
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DBG_Configure
+<BR>[Called By]<UL><LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TC_FindMckDivisor
+<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DBG_Configure
 <LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_memcpy
-<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TC_FindMckDivisor
 </UL>
 
 <P><STRONG><a name="[14a]"></a>__aeabi_memcpy8</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, rt_memcpy_w.o(.text), UNUSED)
@@ -616,17 +616,17 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 152 + Unknown Stack Size
 <LI>Call Chain = BusFault_Handler &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StackUnwind
+<BR>[Calls]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StackUnwind
+<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_sam.o(vectors)
 </UL>
 <P><STRONG><a name="[8a]"></a>DBG_Configure</STRONG> (Thumb, 96 bytes, Stack size 40 bytes, dbg_console.o(i.DBG_Configure))
 <BR><BR>[Stack]<UL><LI>Max Depth = 76<LI>Call Chain = DBG_Configure &rArr; PIO_Configure &rArr; PIO_SetPeripheralD
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
-<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PMC_EnablePeripheral
+<BR>[Calls]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PMC_EnablePeripheral
 <LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIO_Configure
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DBG_PutChar
 </UL>
@@ -857,14 +857,14 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 256 + Unknown Stack Size
 <LI>Call Chain = GMACB_InitPhy &rArr; GMACB_ResetPhy &rArr; GMACB_WritePhy &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Wait
+<BR>[Calls]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIO_Configure
+<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIO_Set
+<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIO_Clear
+<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Wait
 <LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GMAC_SetMdcClock
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GMACB_ResetPhy
 <LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GMACB_FindValidPhy
 <LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIO_Configure
-<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIO_Set
-<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIO_Clear
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gmac_tapdev_init
 </UL>
@@ -903,14 +903,14 @@ Global Symbols
 <P><STRONG><a name="[ab]"></a>GMACD_Init</STRONG> (Thumb, 126 bytes, Stack size 32 bytes, gmacd.o(i.GMACD_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = GMACD_Init &rArr; PMC_EnablePeripheral &rArr;  __aeabi_assert (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GMAC_NetworkControl
+<BR>[Calls]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PMC_EnablePeripheral
+<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GMAC_NetworkControl
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GMAC_GetItStatus
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GMAC_DisableAllQueueIt
 <LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GMAC_Configure
 <LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GMAC_ClearTxStatus
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GMAC_ClearStatistics
 <LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GMAC_ClearRxStatus
-<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PMC_EnablePeripheral
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gmac_tapdev_init
 </UL>
@@ -1128,8 +1128,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_assert
 </UL>
-<BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Wait
-<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TWID_Read
+<BR>[Called By]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TWID_Read
+<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Wait
 </UL>
 
 <P><STRONG><a name="[c6]"></a>GetTicks</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, timetick.o(i.GetTicks))
@@ -1145,9 +1145,9 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 152 + Unknown Stack Size
 <LI>Call Chain = HardFault_Handler &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StackUnwind
+<BR>[Calls]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StackUnwind
 <LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardFault_reason
+<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_sam.o(vectors)
 </UL>
@@ -1176,8 +1176,8 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 152 + Unknown Stack Size
 <LI>Call Chain = MemManage_Handler &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StackUnwind
+<BR>[Calls]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StackUnwind
+<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_sam.o(vectors)
 </UL>
@@ -1244,9 +1244,9 @@ Global Symbols
 <LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIO_SetOutput
 <LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIO_SetInput
 </UL>
-<BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GMACB_InitPhy
+<BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GMACB_InitPhy
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DBG_Configure
-<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[9a]"></a>PIO_Set</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, pio.o(i.PIO_Set))
@@ -1259,11 +1259,11 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_assert
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DBG_Configure
-<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GMACD_Init
-<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;clock_init
+<BR>[Called By]<UL><LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;clock_init
 <LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIO_Configure
 <LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DBG_Configure
+<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GMACD_Init
 </UL>
 
 <P><STRONG><a name="[cb]"></a>PioInterruptHandler</STRONG> (Thumb, 100 bytes, Stack size 24 bytes, pio_it.o(i.PioInterruptHandler))
@@ -1419,8 +1419,8 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 152 + Unknown Stack Size
 <LI>Call Chain = UsageFault_Handler &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StackUnwind
+<BR>[Calls]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StackUnwind
+<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_sam.o(vectors)
 </UL>
@@ -1543,10 +1543,10 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[e8]"></a>htons</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, uip.o(i.htons))
-<BR><BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;generate_tcp_stats
+<BR><BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;generate_tcp_stats
 <LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;upper_layer_chksum
 <LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_ipchksum
-<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[fd]"></a>httpd_appcall</STRONG> (Thumb, 154 bytes, Stack size 8 bytes, httpd.o(i.httpd_appcall))
@@ -1596,8 +1596,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 400 + Unknown Stack Size
 <LI>Call Chain = main &rArr; gmac_tapdev_init &rArr; GMACB_AutoNegotiate &rArr; GMACB_DumpRegisters &rArr; GMACB_ReadPhy &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-<LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_process
+<BR>[Calls]<UL><LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_process
 <LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_init
 <LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_arp_timer
 <LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_arp_out
@@ -1620,6 +1619,7 @@ Global Symbols
 <LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIO_Configure
 <LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_app_init
 <LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SCB_EnableDCache
+<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
@@ -1695,8 +1695,8 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[117]"></a>uip_add32</STRONG> (Thumb, 106 bytes, Stack size 0 bytes, uip.o(i.uip_add32))
-<BR><BR>[Called By]<UL><LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_add_rcv_nxt
-<LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_process
+<BR><BR>[Called By]<UL><LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_process
+<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_add_rcv_nxt
 </UL>
 
 <P><STRONG><a name="[109]"></a>uip_arp_arpin</STRONG> (Thumb, 216 bytes, Stack size 8 bytes, uip_arp.o(i.uip_arp_arpin))
@@ -1727,8 +1727,8 @@ Global Symbols
 <P><STRONG><a name="[119]"></a>uip_ipchksum</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, uip.o(i.uip_ipchksum))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = uip_ipchksum &rArr; chksum
 </UL>
-<BR>[Calls]<UL><LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chksum
-<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;htons
+<BR>[Calls]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;htons
+<LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chksum
 </UL>
 <BR>[Called By]<UL><LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_process
 </UL>
@@ -1750,12 +1750,12 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 168 + Unknown Stack Size
 <LI>Call Chain = uip_process &rArr; uip_log &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;httpd_appcall
+<BR>[Calls]<UL><LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_log
+<LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;httpd_appcall
 <LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_tcpchksum
 <LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_add32
 <LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_add_rcv_nxt
 <LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_ipchksum
-<LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_log
 </UL>
 <BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1789,8 +1789,8 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 152 + Unknown Stack Size
 <LI>Call Chain = _app_init &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;httpd_init
+<BR>[Calls]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;httpd_init
+<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -2065,8 +2065,8 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 224 + Unknown Stack Size
 <LI>Call Chain = generate_tcp_stats &rArr; __2snprintf &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2snprintf
-<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;htons
+<BR>[Calls]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;htons
+<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2snprintf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> httpd-cgi.o(i.tcp_stats)
 </UL>
@@ -2137,8 +2137,8 @@ Local Symbols
 <P><STRONG><a name="[11d]"></a>upper_layer_chksum</STRONG> (Thumb, 66 bytes, Stack size 16 bytes, uip.o(i.upper_layer_chksum))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = upper_layer_chksum &rArr; chksum
 </UL>
-<BR>[Calls]<UL><LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chksum
-<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;htons
+<BR>[Calls]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;htons
+<LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chksum
 </UL>
 <BR>[Called By]<UL><LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_tcpchksum
 </UL>
