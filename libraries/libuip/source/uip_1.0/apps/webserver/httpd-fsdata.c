@@ -261,16 +261,16 @@ static const unsigned char data_customers_html[] = {
 	0x3c, 0x2f, 0x62, 0x6f, 0x64, 0x79, 0x3e, 0xa, 0x3c, 0x2f, 0x68, 0x74, 0x6d, 0x6c, 0x3e, 0};
 	
 
-const struct httpd_fsdata_file file_customers_html[] = {{NULL, data_customers_html, data_customers_html + 16, sizeof(data_customers_html) - 16}};
+const struct httpd_fsdata_file file_customers_html[] = {{NULL, data_customers_html, data_customers_html + 16, sizeof(data_customers_html) - 17}};
 
-const struct httpd_fsdata_file file_script_js[] = {{file_customers_html, data_script_js, data_script_js + 11, sizeof(data_script_js) - 11}};
+const struct httpd_fsdata_file file_script_js[] = {{file_customers_html, data_script_js, data_script_js + 11, sizeof(data_script_js) - 12}};
 
-const struct httpd_fsdata_file file_about_html[] = {{file_script_js, data_about_html, data_about_html + 122, sizeof(data_about_html) - 12}};
+const struct httpd_fsdata_file file_about_html[] = {{file_script_js, data_about_html, data_about_html + 12, sizeof(data_about_html) - 13}};
 
-const struct httpd_fsdata_file file_site_css[] = {{file_about_html, data_site_css, data_site_css + 10, sizeof(data_site_css) - 10}};
+const struct httpd_fsdata_file file_site_css[] = {{file_about_html, data_site_css, data_site_css + 10, sizeof(data_site_css) - 11}};
 
-const struct httpd_fsdata_file file_index_html[] = {{file_site_css, data_index_html, data_index_html + 12, sizeof(data_index_html) - 12}};
+const struct httpd_fsdata_file file_index_html[] = {{file_site_css, data_index_html, data_index_html + 12, sizeof(data_index_html) - 13}};
 
 #define HTTPD_FS_ROOT file_index_html
 
-#define HTTPD_FS_NUMFILES 6
+#define HTTPD_FS_NUMFILES 5

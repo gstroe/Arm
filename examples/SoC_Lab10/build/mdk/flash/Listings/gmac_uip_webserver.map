@@ -1900,8 +1900,8 @@ Image Symbol Table
     .bss                                     0x20400130   Section       56  pio_it.o(.bss)
     _aIntSources                             0x20400130   Data          56  pio_it.o(.bss)
     .bss                                     0x20400168   Section       16  timetick.o(.bss)
-    .bss                                     0x20400178   Section       12  httpd-fs.o(.bss)
-    count                                    0x20400178   Data          12  httpd-fs.o(.bss)
+    .bss                                     0x20400178   Section       10  httpd-fs.o(.bss)
+    count                                    0x20400178   Data          10  httpd-fs.o(.bss)
     .bss                                     0x204001a0   Section    100672  gmac_tapdev.o(.bss)
     gGmacd                                   0x204001a0   Data         152  gmac_tapdev.o(.bss)
     gGmacb                                   0x20400240   Data          12  gmac_tapdev.o(.bss)
@@ -2663,8 +2663,8 @@ Memory Map of the image
     0x20400128   0x00000008   Data   RW         4240    .data               uip_arp.o
     0x20400130   0x00000038   Zero   RW         1093    .bss                pio_it.o
     0x20400168   0x00000010   Zero   RW         1525    .bss                timetick.o
-    0x20400178   0x0000000c   Zero   RW         3760    .bss                httpd-fs.o
-    0x20400184   0x0000001c   PAD
+    0x20400178   0x0000000a   Zero   RW         3760    .bss                httpd-fs.o
+    0x20400182   0x0000001e   PAD
     0x204001a0   0x00018940   Zero   RW         3895    .bss                gmac_tapdev.o
     0x20418ae0   0x0000263c   Zero   RW         4143    .bss                uip.o
     0x2041b11c   0x00000060   Zero   RW         4238    .bss                uip_arp.o
@@ -2713,7 +2713,7 @@ Image component sizes
       4246        226         29         10          0      45422   gmacd.o
          0          0        586          0          0       2341   http-strings.o
        644         74        244         52          0       6988   httpd-cgi.o
-       176         20       3972          0         12       5248   httpd-fs.o
+       176         20       3972          0         10       5248   httpd-fs.o
       1882        122          0          0          0       9373   httpd.o
       1468        404        112         22          0     199468   main.o
         56         12          0          0          0       1764   mpu.o
@@ -2736,7 +2736,7 @@ Image component sizes
     ----------------------------------------------------------------------
      23606       4394       5498        864     122956     649290   Object Totals
          0          0         48          0      12288          0   (incl. Generated)
-        20          0          9         24         28          0   (incl. Padding)
+        20          0          9         24         30          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
