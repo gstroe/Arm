@@ -328,24 +328,27 @@ void get_data(void)
 	key = uip_appdata;
 	//uip_send(key,1);
 	
-	switch(key[0])
-	{
-		case 'r':
-			if (readData() == 0)
-				uip_send("The LED is OFF\r\n",16);
-			else
-				uip_send("The LED is ON \r\n",16);
-			break;
-		case 't':
-			modData();
-			if (readData() == 0)
-				uip_send("The LED is OFF\r\n",16);
-			else
-				uip_send("The LED is ON \r\n",16);
-			break;
-		default:
-			if(key[0] >= 0x20)
-				uip_send("Not a Command!\r\n",16);
+	if(uip_newdata() || uip_rexmit()) 
+	{		
+		switch(key[0])
+		{
+			case 'r':
+				if (readData() == 0)
+					uip_send("The LED is OFF\r\n",16);
+				else
+					uip_send("The LED is ON \r\n",16);
+				break;
+			case 't':
+				modData();
+				if (readData() == 0)
+					uip_send("The LED is OFF\r\n",16);
+				else
+					uip_send("The LED is ON \r\n",16);
+				break;
+			default:
+				//if(key[0] >= 0x20)
+					uip_send("Not a Command!\r\n",16);
+		}
 	}
 	
 	
