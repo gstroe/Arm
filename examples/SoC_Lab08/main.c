@@ -111,14 +111,14 @@ void _PC19_it()
 
 void _PA6_it()
 {
-	PIO_DisableIt(&mypins[4]); // disable the pin handler
+	//PIO_DisableIt(&mypins[4]); // disable the pin handler
 	
 	//extra space
 	printf("\n\r\n\r");
 	
-	printf(" C19 has been pulled low!");
+	printf(" A06 has been pulled low!");
 	
-	PIO_EnableIt(&mypins[4]); // enable the pin handler
+	//PIO_EnableIt(&mypins[4]); // enable the pin handler
 	
 	//extra space
 	printf("\n\r\n\r");

@@ -238,31 +238,21 @@
       <Books>
         <Book>
           <Number>0</Number>
-          <Title>User Manual (SAMV71-XULTRA)</Title>
-          <Path>G:\Programs\Programs\Keil\ARM\PACK\Keil\SAM-ESV7_SFP\2.2.0\Boards\Atmel\SAMV71-XULTRA\Documents\Atmel-42408-SAMV71-Xplained-Ultra_User-Guide.pdf</Path>
-        </Book>
-        <Book>
-          <Number>1</Number>
-          <Title>Atmel SAMV71 Xplained Ultra: Blinky Lab (SAMV71-XULTRA)</Title>
-          <Path>G:\Programs\Programs\Keil\ARM\PACK\Keil\SAM-ESV7_SFP\2.2.0\Boards\Atmel\SAMV71-XULTRA\Documents\Atmel_Blinky_Lab.pdf</Path>
-        </Book>
-        <Book>
-          <Number>2</Number>
           <Title>Bill of Materials (SAMV71-XULTRA)</Title>
           <Path>G:\Programs\Programs\Keil\ARM\PACK\Keil\SAM-ESV7_SFP\2.2.0\Boards\Atmel\SAMV71-XULTRA\Documents\Bill of Materials Fitted- SAM V71 Xplained Ultra_release_rev3.zip</Path>
         </Book>
         <Book>
-          <Number>3</Number>
+          <Number>1</Number>
           <Title>Gerber Files (SAMV71-XULTRA)</Title>
           <Path>G:\Programs\Programs\Keil\ARM\PACK\Keil\SAM-ESV7_SFP\2.2.0\Boards\Atmel\SAMV71-XULTRA\Documents\Gerber.zip</Path>
         </Book>
         <Book>
-          <Number>4</Number>
+          <Number>2</Number>
           <Title>Schematics (SAMV71-XULTRA)</Title>
           <Path>G:\Programs\Programs\Keil\ARM\PACK\Keil\SAM-ESV7_SFP\2.2.0\Boards\Atmel\SAMV71-XULTRA\Documents\SAM_V71_Xplained_Ultra_design_documentation_release_rev8.pdf</Path>
         </Book>
         <Book>
-          <Number>5</Number>
+          <Number>3</Number>
           <Title>SAMV71 Xplained Ultra Web Page (SAMV71-XULTRA)</Title>
           <Path>http://www.atmel.com/tools/ATSAMV71-XULT.aspx</Path>
         </Book>

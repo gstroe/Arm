@@ -33,10 +33,7 @@ Section Cross References
     main.o(i._DBGU_Handler) refers to main.o(i.Toggle_Outputs) for Toggle_Outputs
     main.o(i._DBGU_Handler) refers to main.o(i.Read_Inputs) for Read_Inputs
     main.o(i._DBGU_Handler) refers to main.o(i.main_screen) for main_screen
-    main.o(i._PA6_it) refers to pio_it.o(i.PIO_DisableIt) for PIO_DisableIt
     main.o(i._PA6_it) refers to noretval__2printf.o(.text) for __2printf
-    main.o(i._PA6_it) refers to pio_it.o(i.PIO_EnableIt) for PIO_EnableIt
-    main.o(i._PA6_it) refers to main.o(.constdata) for mypins
     main.o(i._PC19_it) refers to pio_it.o(i.PIO_DisableIt) for PIO_DisableIt
     main.o(i._PC19_it) refers to noretval__2printf.o(.text) for __2printf
     main.o(i._PC19_it) refers to pio_it.o(i.PIO_EnableIt) for PIO_EnableIt
@@ -1049,25 +1046,25 @@ Image Symbol Table
     i._DBGU_Handler                          0x00401878   Section        0  main.o(i._DBGU_Handler)
     _DBGU_Handler                            0x00401879   Thumb Code   104  main.o(i._DBGU_Handler)
     i._PA6_it                                0x00401928   Section        0  main.o(i._PA6_it)
-    i._PC19_it                               0x00401998   Section        0  main.o(i._PC19_it)
-    i._SetupMemoryRegion                     0x00401a08   Section        0  board_lowlevel.o(i._SetupMemoryRegion)
-    i.__assert_puts                          0x00401b6c   Section        0  retarget.o(i.__assert_puts)
-    i._is_digit                              0x00401b80   Section        0  __printf_wp.o(i._is_digit)
-    i._sys_exit                              0x00401b8e   Section        0  retarget.o(i._sys_exit)
-    i._ttywrch                               0x00401b92   Section        0  retarget.o(i._ttywrch)
-    i.ferror                                 0x00401b9e   Section        0  retarget.o(i.ferror)
-    i.fputc                                  0x00401ba8   Section        0  retarget.o(i.fputc)
-    i.main                                   0x00401bd4   Section        0  main.o(i.main)
-    i.main_screen                            0x00401cf0   Section        0  main.o(i.main_screen)
-    .constdata                               0x00401ed8   Section       60  main.o(.constdata)
-    .constdata                               0x00401f14   Section       24  dbg_console.o(.constdata)
-    .constdata                               0x00401f2c   Section       24  led.o(.constdata)
-    pinsLeds                                 0x00401f2c   Data          24  led.o(.constdata)
-    .constdata                               0x00401f44   Section       40  _printf_hex_int.o(.constdata)
-    uc_hextab                                0x00401f44   Data          20  _printf_hex_int.o(.constdata)
-    lc_hextab                                0x00401f58   Data          20  _printf_hex_int.o(.constdata)
-    .constdata                               0x00401f6c   Section       17  __printf_flags_wp.o(.constdata)
-    maptable                                 0x00401f6c   Data          17  __printf_flags_wp.o(.constdata)
+    i._PC19_it                               0x00401988   Section        0  main.o(i._PC19_it)
+    i._SetupMemoryRegion                     0x004019f8   Section        0  board_lowlevel.o(i._SetupMemoryRegion)
+    i.__assert_puts                          0x00401b5c   Section        0  retarget.o(i.__assert_puts)
+    i._is_digit                              0x00401b70   Section        0  __printf_wp.o(i._is_digit)
+    i._sys_exit                              0x00401b7e   Section        0  retarget.o(i._sys_exit)
+    i._ttywrch                               0x00401b82   Section        0  retarget.o(i._ttywrch)
+    i.ferror                                 0x00401b8e   Section        0  retarget.o(i.ferror)
+    i.fputc                                  0x00401b98   Section        0  retarget.o(i.fputc)
+    i.main                                   0x00401bc4   Section        0  main.o(i.main)
+    i.main_screen                            0x00401ce0   Section        0  main.o(i.main_screen)
+    .constdata                               0x00401ec8   Section       60  main.o(.constdata)
+    .constdata                               0x00401f04   Section       24  dbg_console.o(.constdata)
+    .constdata                               0x00401f1c   Section       24  led.o(.constdata)
+    pinsLeds                                 0x00401f1c   Data          24  led.o(.constdata)
+    .constdata                               0x00401f34   Section       40  _printf_hex_int.o(.constdata)
+    uc_hextab                                0x00401f34   Data          20  _printf_hex_int.o(.constdata)
+    lc_hextab                                0x00401f48   Data          20  _printf_hex_int.o(.constdata)
+    .constdata                               0x00401f5c   Section       17  __printf_flags_wp.o(.constdata)
+    maptable                                 0x00401f5c   Data          17  __printf_flags_wp.o(.constdata)
     .data                                    0x20400000   Section       12  pio_it.o(.data)
     cpu_irq_critical_section_counter         0x20400000   Data           4  pio_it.o(.data)
     cpu_irq_prev_interrupt_state             0x20400004   Data           1  pio_it.o(.data)
@@ -1322,20 +1319,20 @@ Image Symbol Table
     UsageFault_Handler                       0x004017a1   Thumb Code    52  exceptions.o(i.UsageFault_Handler)
     WDT_Disable                              0x004017f5   Thumb Code     8  wdt.o(i.WDT_Disable)
     Wait                                     0x004017fd   Thumb Code    48  timetick.o(i.Wait)
-    _PA6_it                                  0x00401929   Thumb Code    40  main.o(i._PA6_it)
-    _PC19_it                                 0x00401999   Thumb Code    40  main.o(i._PC19_it)
-    _SetupMemoryRegion                       0x00401a09   Thumb Code   284  board_lowlevel.o(i._SetupMemoryRegion)
-    __assert_puts                            0x00401b6d   Thumb Code    14  retarget.o(i.__assert_puts)
-    _is_digit                                0x00401b81   Thumb Code    14  __printf_wp.o(i._is_digit)
-    _sys_exit                                0x00401b8f   Thumb Code     4  retarget.o(i._sys_exit)
-    _ttywrch                                 0x00401b93   Thumb Code    12  retarget.o(i._ttywrch)
-    ferror                                   0x00401b9f   Thumb Code     8  retarget.o(i.ferror)
-    fputc                                    0x00401ba9   Thumb Code    34  retarget.o(i.fputc)
-    main                                     0x00401bd5   Thumb Code   224  main.o(i.main)
-    main_screen                              0x00401cf1   Thumb Code    76  main.o(i.main_screen)
-    mypins                                   0x00401ed8   Data          60  main.o(.constdata)
-    Region$$Table$$Base                      0x00401f80   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x00401fa0   Number         0  anon$$obj.o(Region$$Table)
+    _PA6_it                                  0x00401929   Thumb Code    28  main.o(i._PA6_it)
+    _PC19_it                                 0x00401989   Thumb Code    40  main.o(i._PC19_it)
+    _SetupMemoryRegion                       0x004019f9   Thumb Code   284  board_lowlevel.o(i._SetupMemoryRegion)
+    __assert_puts                            0x00401b5d   Thumb Code    14  retarget.o(i.__assert_puts)
+    _is_digit                                0x00401b71   Thumb Code    14  __printf_wp.o(i._is_digit)
+    _sys_exit                                0x00401b7f   Thumb Code     4  retarget.o(i._sys_exit)
+    _ttywrch                                 0x00401b83   Thumb Code    12  retarget.o(i._ttywrch)
+    ferror                                   0x00401b8f   Thumb Code     8  retarget.o(i.ferror)
+    fputc                                    0x00401b99   Thumb Code    34  retarget.o(i.fputc)
+    main                                     0x00401bc5   Thumb Code   224  main.o(i.main)
+    main_screen                              0x00401ce1   Thumb Code    76  main.o(i.main_screen)
+    mypins                                   0x00401ec8   Data          60  main.o(.constdata)
+    Region$$Table$$Base                      0x00401f70   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00401f90   Number         0  anon$$obj.o(Region$$Table)
     __stdout                                 0x2040002c   Data           4  retarget.o(.data)
     __stderr                                 0x20400030   Data           4  retarget.o(.data)
     SystemCoreClock                          0x20400034   Data           4  system_samv71.o(.data)
@@ -1352,7 +1349,7 @@ Memory Map of the image
 
   Image Entry point : 0x00400141
 
-  Load Region LR_IROM1 (Base: 0x00400000, Size: 0x00001fe0, Max: 0x00200000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x00400000, Size: 0x00001fd0, Max: 0x00200000, ABSOLUTE)
 
     Execution Region Vector_region (Base: 0x00400000, Size: 0x00000140, Max: 0xffffffff, ABSOLUTE)
 
@@ -1361,7 +1358,7 @@ Memory Map of the image
     0x00400000   0x00000140   Data   RO         2167    vectors             startup_sam.o
 
 
-    Execution Region ROM (Base: 0x00400140, Size: 0x00001e60, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ROM (Base: 0x00400140, Size: 0x00001e50, Max: 0xffffffff, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -1504,25 +1501,25 @@ Memory Map of the image
     0x004017f4   0x00000008   Code   RO         1687    i.WDT_Disable       wdt.o
     0x004017fc   0x0000007c   Code   RO         1513    i.Wait              timetick.o
     0x00401878   0x000000b0   Code   RO           15    i._DBGU_Handler     main.o
-    0x00401928   0x00000070   Code   RO           16    i._PA6_it           main.o
-    0x00401998   0x00000070   Code   RO           17    i._PC19_it          main.o
-    0x00401a08   0x00000164   Code   RO         2549    i._SetupMemoryRegion  board_lowlevel.o
-    0x00401b6c   0x00000014   Code   RO         2111    i.__assert_puts     retarget.o
-    0x00401b80   0x0000000e   Code   RO         2816    i._is_digit         c_w.l(__printf_wp.o)
-    0x00401b8e   0x00000004   Code   RO         2112    i._sys_exit         retarget.o
-    0x00401b92   0x0000000c   Code   RO         2113    i._ttywrch          retarget.o
-    0x00401b9e   0x00000008   Code   RO         2114    i.ferror            retarget.o
-    0x00401ba6   0x00000002   PAD
-    0x00401ba8   0x0000002c   Code   RO         2115    i.fputc             retarget.o
-    0x00401bd4   0x0000011c   Code   RO           18    i.main              main.o
-    0x00401cf0   0x000001e8   Code   RO           19    i.main_screen       main.o
-    0x00401ed8   0x0000003c   Data   RO           20    .constdata          main.o
-    0x00401f14   0x00000018   Data   RO         2624    .constdata          dbg_console.o
-    0x00401f2c   0x00000018   Data   RO         2704    .constdata          led.o
-    0x00401f44   0x00000028   Data   RO         2789    .constdata          c_w.l(_printf_hex_int.o)
-    0x00401f6c   0x00000011   Data   RO         2819    .constdata          c_w.l(__printf_flags_wp.o)
-    0x00401f7d   0x00000003   PAD
-    0x00401f80   0x00000020   Data   RO         3012    Region$$Table       anon$$obj.o
+    0x00401928   0x00000060   Code   RO           16    i._PA6_it           main.o
+    0x00401988   0x00000070   Code   RO           17    i._PC19_it          main.o
+    0x004019f8   0x00000164   Code   RO         2549    i._SetupMemoryRegion  board_lowlevel.o
+    0x00401b5c   0x00000014   Code   RO         2111    i.__assert_puts     retarget.o
+    0x00401b70   0x0000000e   Code   RO         2816    i._is_digit         c_w.l(__printf_wp.o)
+    0x00401b7e   0x00000004   Code   RO         2112    i._sys_exit         retarget.o
+    0x00401b82   0x0000000c   Code   RO         2113    i._ttywrch          retarget.o
+    0x00401b8e   0x00000008   Code   RO         2114    i.ferror            retarget.o
+    0x00401b96   0x00000002   PAD
+    0x00401b98   0x0000002c   Code   RO         2115    i.fputc             retarget.o
+    0x00401bc4   0x0000011c   Code   RO           18    i.main              main.o
+    0x00401ce0   0x000001e8   Code   RO           19    i.main_screen       main.o
+    0x00401ec8   0x0000003c   Data   RO           20    .constdata          main.o
+    0x00401f04   0x00000018   Data   RO         2624    .constdata          dbg_console.o
+    0x00401f1c   0x00000018   Data   RO         2704    .constdata          led.o
+    0x00401f34   0x00000028   Data   RO         2789    .constdata          c_w.l(_printf_hex_int.o)
+    0x00401f5c   0x00000011   Data   RO         2819    .constdata          c_w.l(__printf_flags_wp.o)
+    0x00401f6d   0x00000003   PAD
+    0x00401f70   0x00000020   Data   RO         3012    Region$$Table       anon$$obj.o
 
 
     Execution Region RW_IRAM1 (Base: 0x20400000, Size: 0x00000088, Max: 0x0005d000, ABSOLUTE)
@@ -1565,23 +1562,23 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       368         72          0          0          0       1304   board_lowlevel.o
-       272         62         24          6          0       3840   dbg_console.o
-       532        182          0          0          0      83608   exceptions.o
-       104         12         24          0          0       2017   led.o
-      1704        896         60          0          0     105237   main.o
-        56         12          0          0          0       1804   mpu.o
-       542          8          0          0          0       8783   pio.o
-      1134        398          0         12         56      40960   pio_it.o
-       148         60          0          0          0        619   pmc.o
-        88         16          0         16          0       5258   retarget.o
-       192         56        320          0          0       2382   startup_sam.o
-       284         42          0          4          0        979   system_samv71.o
-       600        280          0         24         16      35620   timetick.o
-         8          0          0          0          0        970   wdt.o
+       368         72          0          0          0       1276   board_lowlevel.o
+       272         62         24          6          0       3736   dbg_console.o
+       532        182          0          0          0      83332   exceptions.o
+       104         12         24          0          0       1965   led.o
+      1688        892         60          0          0     104901   main.o
+        56         12          0          0          0       1764   mpu.o
+       542          8          0          0          0       8579   pio.o
+      1134        398          0         12         56      40692   pio_it.o
+       148         60          0          0          0        603   pmc.o
+        88         16          0         16          0       5110   retarget.o
+       192         56        320          0          0       2310   startup_sam.o
+       284         42          0          4          0        955   system_samv71.o
+       600        280          0         24         16      35480   timetick.o
+         8          0          0          0          0        926   wdt.o
 
     ----------------------------------------------------------------------
-      6042       2096        460         64      12360     293381   Object Totals
+      6026       2092        460         64      12360     291629   Object Totals
          0          0         32          0      12288          0   (incl. Generated)
         10          0          0          2          0          0   (incl. Padding)
 
@@ -1648,15 +1645,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      7576       2222        520         64      12360     290909   Grand Totals
-      7576       2222        520         64      12360     290909   ELF Image Totals
-      7576       2222        520         64          0          0   ROM Totals
+      7560       2218        520         64      12360     289157   Grand Totals
+      7560       2218        520         64      12360     289157   ELF Image Totals
+      7560       2218        520         64          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 8096 (   7.91kB)
+    Total RO  Size (Code + RO Data)                 8080 (   7.89kB)
     Total RW  Size (RW Data + ZI Data)             12424 (  12.13kB)
-    Total ROM Size (Code + RO Data + RW Data)       8160 (   7.97kB)
+    Total ROM Size (Code + RO Data + RW Data)       8144 (   7.95kB)
 
 ==============================================================================
 
