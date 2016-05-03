@@ -312,9 +312,10 @@ httpd_appcall(void)
     if(uip_poll()) {
       ++s->timer;
       if(s->timer >= 20) {
-	uip_abort();
+					uip_abort();
       }
     } else {
+			uip_send("ok\n", 3);
       s->timer = 0;
     }
     handle_connection(s);

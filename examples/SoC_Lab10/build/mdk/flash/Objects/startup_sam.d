@@ -1,7 +1,7 @@
 .\flash\objects\startup_sam.o: ..\..\..\..\libraries\libboard\resources_v71\mdk\startup_sam.c
 .\flash\objects\startup_sam.o: ..\..\..\..\libraries\libchip\include\samv71\samv71.h
 .\flash\objects\startup_sam.o: ..\..\..\..\libraries\libchip\include\samv71\samv71q21.h
-.\flash\objects\startup_sam.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\flash\objects\startup_sam.o: G:\Programs\Programs\Keil\ARM\ARMCC\Bin\..\include\stdint.h
 .\flash\objects\startup_sam.o: ..\..\..\..\libraries\libchip\include\cmsis\CMSIS\Include\core_cm7.h
 .\flash\objects\startup_sam.o: ..\..\..\..\libraries\libchip\include\cmsis\CMSIS\Include\core_cmInstr.h
 .\flash\objects\startup_sam.o: ..\..\..\..\libraries\libchip\include\cmsis\CMSIS\Include\cmsis_armcc.h
@@ -100,4 +100,4 @@
 .\flash\objects\startup_sam.o: ..\..\..\..\libraries\libchip\include\samv71\instance/instance_uart3.h
 .\flash\objects\startup_sam.o: ..\..\..\..\libraries\libchip\include\samv71\instance/instance_uart4.h
 .\flash\objects\startup_sam.o: ..\..\..\..\libraries\libchip\include\samv71\pio/pio_samv71q21.h
-.\flash\objects\startup_sam.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\flash\objects\startup_sam.o: G:\Programs\Programs\Keil\ARM\ARMCC\Bin\..\include\stdio.h

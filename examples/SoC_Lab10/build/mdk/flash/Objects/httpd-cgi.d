@@ -11,5 +11,5 @@
 .\flash\objects\httpd-cgi.o: ..\..\..\..\libraries\libuip\source\uip_1.0\uip\lc-switch.h
 .\flash\objects\httpd-cgi.o: ..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fs.h
 .\flash\objects\httpd-cgi.o: ..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-cgi.h
-.\flash\objects\httpd-cgi.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
-.\flash\objects\httpd-cgi.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\flash\objects\httpd-cgi.o: G:\Programs\Programs\Keil\ARM\ARMCC\Bin\..\include\stdio.h
+.\flash\objects\httpd-cgi.o: G:\Programs\Programs\Keil\ARM\ARMCC\Bin\..\include\string.h

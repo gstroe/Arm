@@ -12,4 +12,4 @@
 .\flash\objects\uip-fw.o: ..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fs.h
 .\flash\objects\uip-fw.o: ..\..\..\..\libraries\libuip\source\uip_1.0\uip\uip_arch.h
 .\flash\objects\uip-fw.o: ..\..\..\..\libraries\libuip\source\uip_1.0\uip\uip-fw.h
-.\flash\objects\uip-fw.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\flash\objects\uip-fw.o: G:\Programs\Programs\Keil\ARM\ARMCC\Bin\..\include\string.h

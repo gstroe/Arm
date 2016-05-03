@@ -12,4 +12,4 @@
 .\flash\objects\httpd.o: ..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-fs.h
 .\flash\objects\httpd.o: ..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\httpd-cgi.h
 .\flash\objects\httpd.o: ..\..\..\..\libraries\libuip\source\uip_1.0\apps\webserver\http-strings.h
-.\flash\objects\httpd.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\flash\objects\httpd.o: G:\Programs\Programs\Keil\ARM\ARMCC\Bin\..\include\string.h
