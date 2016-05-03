@@ -293,36 +293,97 @@ handle_connection(struct httpd_state *s)
     handle_output(s);
   }
 }
+
+void get_website(void)
+{
+struct httpd_state *s = (struct httpd_state *)&(uip_conn->appstate);
+
+		if(uip_closed() || uip_aborted() || uip_timedout()) {
+		} else if(uip_connected()) {
+			PSOCK_INIT(&s->sin, s->inputbuf, sizeof(s->inputbuf) - 1);
+			PSOCK_INIT(&s->sout, s->inputbuf, sizeof(s->inputbuf) - 1);
+			PT_INIT(&s->outputpt);
+			s->state = STATE_WAITING;
+			/*    timer_set(&s->timer, CLOCK_SECOND * 100);*/
+			s->timer = 0;
+			handle_connection(s);
+		} else if(s != NULL) {
+			if(uip_poll()) {
+				++s->timer;
+				if(s->timer >= 20) {
+						uip_abort();
+				}
+			} else {
+				s->timer = 0;
+			}
+			handle_connection(s);
+		} else {
+			uip_abort();
+		}
+}
+
+void get_data(void)
+{
+	char *key;
+	key = uip_appdata;
+	//uip_send(key,1);
+	
+	switch(key[0])
+	{
+		case 'r':
+			if (readData() == 0)
+				uip_send("The LED is OFF\r\n",16);
+			else
+				uip_send("The LED is ON \r\n",16);
+			break;
+		case 't':
+			modData();
+			if (readData() == 0)
+				uip_send("The LED is OFF\r\n",16);
+			else
+				uip_send("The LED is ON \r\n",16);
+			break;
+		default:
+			if(key[0] >= 0x20)
+				uip_send("Not a Command!\r\n",16);
+	}
+	
+	
+		
+}
+
+	
+
 /*---------------------------------------------------------------------------*/
 void
 httpd_appcall(void)
 {
-  struct httpd_state *s = (struct httpd_state *)&(uip_conn->appstate);
+	/*char * data;
+	data = uip_appdata;
 
-  if(uip_closed() || uip_aborted() || uip_timedout()) {
-  } else if(uip_connected()) {
-    PSOCK_INIT(&s->sin, s->inputbuf, sizeof(s->inputbuf) - 1);
-    PSOCK_INIT(&s->sout, s->inputbuf, sizeof(s->inputbuf) - 1);
-    PT_INIT(&s->outputpt);
-    s->state = STATE_WAITING;
-    /*    timer_set(&s->timer, CLOCK_SECOND * 100);*/
-    s->timer = 0;
-    handle_connection(s);
-  } else if(s != NULL) {
-    if(uip_poll()) {
-      ++s->timer;
-      if(s->timer >= 20) {
-					uip_abort();
-      }
-    } else {
-			uip_send("ok\n", 3);
-      s->timer = 0;
-    }
-    handle_connection(s);
-  } else {
-    uip_abort();
-  }
+	if (data != 0)
+		printf("%s\n\r",data);
+
+	
+	char check[16] = {data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7],
+									data[8], data[9], data[10], data[11], data[12], data[13], data[14], data[15]};
+	char valid[16];
+	strcpy(valid,"GET /demo_get.asp");
+	*/
+
+	
+		switch(uip_conn->lport)
+		{
+			case HTONS(1234):
+				get_data();
+				break;
+			case HTONS(80):
+				get_website();								
+				break;
+		}
+	
 }
+
 /*---------------------------------------------------------------------------*/
 /**
  * \brief      Initialize the web server
@@ -330,10 +391,12 @@ httpd_appcall(void)
  *             This function initializes the web server and should be
  *             called at system boot-up.
  */
-void
-httpd_init(void)
+
+
+void httpd_init(void)
 {
   uip_listen(HTONS(80));
+	uip_listen(HTONS(1234));
 }
 /*---------------------------------------------------------------------------*/
 /** @} */

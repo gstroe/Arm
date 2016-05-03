@@ -173,7 +173,7 @@ extern int main( void )
 {
 
 	/* Disable watchdog */
-5	WDT_Disable(WDT);
+	WDT_Disable(WDT);
 	
 	// Set up wait timer
 	TimeTick_Configure();

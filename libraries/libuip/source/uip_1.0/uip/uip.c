@@ -767,7 +767,7 @@ uip_process(u8_t flag)
 	     data for the retransmit. In SYN_RCVD, we resend the
 	     SYNACK that we sent earlier and in LAST_ACK we have to
 	     retransmit our FINACK. */
-//	  UIP_STAT(++uip_stat.tcp.rexmit);
+	  UIP_STAT(++uip_stat.tcp.rexmit);
 	  switch(uip_connr->tcpstateflags & UIP_TS_MASK) {
 	  case UIP_SYN_RCVD:
 	    /* In the SYN_RCVD state, we should retransmit our
@@ -824,7 +824,7 @@ uip_process(u8_t flag)
 #endif
 
   /* This is where the input processing starts. */
-//  UIP_STAT(++uip_stat.ip.recv);
+  UIP_STAT(++uip_stat.ip.recv);
 
   /* Start of IP input header processing code. */
 

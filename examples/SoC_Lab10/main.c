@@ -111,6 +111,35 @@
 #include "gmac_tapdev.h"
 #include "timer.h"
 
+// some globle definitions
+// chip id
+#define CHIPID_CIDR (*(uint32_t *)0x400E0940)
+// random number
+#define TRNG_CR (*(uint32_t *)0x40070000)
+#define TRNG_STATUS (*(uint32_t *)0x4007001C)
+#define TRNG_DATA (*(uint32_t *)0x40070050)
+// System Write protection
+#define SYSC_WPMR (*(uint32_t *)0x400E18E4)
+// Real Time Clock
+#define RTC_CR (*(uint32_t *)0x400E1860)
+#define RTC_MR (*(uint32_t *)0x400E1864)
+#define RTC_SR (*(uint32_t *)0x400E1878)
+#define RTC_SRC (*(uint32_t *)0x400E187C)
+#define RTC_TIMR (*(uint32_t *)0x400E1868)
+#define RTC_CALR (*(uint32_t *)0x400E186C)
+#define RTC_VER (*(uint32_t *)0x400E188C)
+
+// pins
+#define SW0 {PIO_PA9, PIOA, ID_PIOA, PIO_PERIPH_A, PIO_IT_RISE_EDGE | PIO_DEGLITCH | PIO_DEBOUNCE}
+#define PD26 {PIO_PD26, PIOD, ID_PIOD, PIO_OUTPUT_0, PIO_DEFAULT}
+#define PA22 {PIO_PA22, PIOA, ID_PIOA, PIO_OUTPUT_1, PIO_DEFAULT}
+#define PC19 {PIO_PC19, PIOC, ID_PIOC, PIO_INPUT, PIO_DEFAULT}
+#define PA6 {PIO_PA6, PIOA, ID_PIOA, PIO_INPUT, PIO_DEFAULT}
+
+
+// SET UP PINS
+const Pin mypins[]= {SW0, PD26, PA22, PC19, PA6};
+
 /*---------------------------------------------------------------------------
  *         Variables
  *---------------------------------------------------------------------------*/
@@ -169,6 +198,25 @@ static void _app_init(void)
 	dhcpc_init(MacAddress.addr, 6);
 #endif
 }
+
+extern void Get_SW0()
+{
+	PIO_DisableIt(&mypins[0]); // disable the pin handler
+	
+	
+	
+	modData();
+	
+	bool pCheck;
+	
+	pCheck = PIO_Get(&mypins[0]);
+	
+	printf(" The Switch was Pushed!\r\n");
+	
+	PIO_EnableIt(&mypins[0]); // enable the pin handler
+}
+
+
 
 /*----------------------------------------------------------------------------
  *        Exported functions
@@ -234,7 +282,21 @@ int main(void)
 
 	/* Disable watchdog */
 	WDT_Disable(WDT);
+	
+	// SET UP PINS
+	PIO_Configure(mypins, PIO_LISTSIZE(mypins));
+	
+	// enable PIO interupts
+	PIO_InitializeInterrupts(3);
+	PIO_ConfigureIt(&mypins[0],Get_SW0);
+	PIO_EnableIt(&mypins[0]);
+	PIO_SetDebounceFilter(&mypins[0], 10);
 
+	// Setup LEDS
+	for(int i = 0; i < LED_NUM; i++)
+		LED_Configure(i);
+	
+	
 	/* Enable I and D cache */
 	SCB_EnableICache();
 	SCB_EnableDCache();
@@ -330,8 +392,7 @@ int main(void)
 					uip_len is set to a value > 0. */
 				if (uip_len > 0)
 					gmac_tapdev_send();
-			}
-		} else if (timer_expired(&periodic_timer)) {
+			}		} else if (timer_expired(&periodic_timer)) {
 			timer_reset(&periodic_timer);
 
 			for (i = 0; i < UIP_CONNS; i++) {

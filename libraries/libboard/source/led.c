@@ -148,3 +148,21 @@ extern uint32_t LED_Toggle(uint32_t dwLed)
 #endif
 }
 
+
+extern uint32_t LED_Read(uint32_t dwLed)
+{
+#ifdef PINS_LEDS
+
+	/* Check if LED exists */
+	if (dwLed >= numLeds)
+		return 0;
+
+	/* Toggle LED */
+	if (PIO_GetOutputDataStatus(&pinsLeds[dwLed]))
+		return 1;
+	else
+		return 0;
+
+#endif
+}
+
